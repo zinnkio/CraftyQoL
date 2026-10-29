@@ -46,6 +46,6 @@ From a clean public checkout with ignored reference configuration:
 .\tools\package.ps1
 ```
 
-The helper builds, runs full API/compiled and tooltip checks, and creates a version/commit-named local preview under ignored `artifacts/`. Includes only DLL, installation/configuration/manual-test notes, licence/notices, changelog and provenance. Refuses unexpected dependencies/unclean trees. No proprietary libraries/assets, PDBs, personal settings or saves. No install/deploy/launch/publication; existing artifacts preserved.
+The helper builds Release without debug symbols, runs full API/compiled and tooltip checks, and writes an install ZIP, standalone DLL and SHA256SUMS.txt under ignored artifacts/CraftyQoL-<version>/. The ZIP contains only the plugin, short installation notes, licence/notices and build provenance. Source paths are mapped to a neutral prefix; proprietary references/PDBs/settings are excluded. It refuses dirty source trees or existing release output, never overwrites older artifacts, and never deploys, launches or publishes anything.
 
-Binary byte reproducibility depends on SDK, source revision, references and build paths. Snapshot build verifies structural compatibility, not byte identity across arbitrary machines. [Manual checks](MANUAL_TESTS.md) remain necessary.
+Byte reproducibility depends on SDK, source revision and reference inputs. Successful checks supplement [manual validation](MANUAL_TESTS.md); they do not establish every runtime/mod/network combination.

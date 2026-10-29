@@ -36,8 +36,33 @@ internal static class BiomeAccessTests
             Program.Assert(BiomeAccess.ValidSelection(BiomeChoice.Meadows, meadows, 0, true) == BiomeChoice.All);
             Program.Assert(BiomeAccess.ValidSelection(BiomeChoice.Meadows, meadows, meadows, false) == BiomeChoice.Meadows);
         });
-        test("mixed biome tooltip exposes only discovered association", () =>
+        test("mixed association reveal mask excludes undiscovered bits", () =>
             Program.Assert(BiomeAccess.Revealed(meadows | mistlands, meadows) == meadows));
+        test("biome tooltip identity requires actual discovery, not available recipes", () =>
+        {
+            for(int choice=1;choice<=9;choice++)
+            {
+                var biome=(BiomeChoice)choice;
+                Program.Assert(!BiomeAccess.IsDiscovered(biome,0));
+                Program.Assert(BiomeAccess.IsDiscovered(biome,Bit(biome)));
+                Program.Assert(!BiomeAccess.Options(0,all,true).Any(o=>o.Choice==biome));
+                Program.Assert(BiomeAccess.Options(Bit(biome),0,false).Any(o=>o.Choice==biome && !o.Enabled));
+            }
+            Program.Assert(!BiomeAccess.IsDiscovered(BiomeChoice.All,all) && !BiomeAccess.IsDiscovered(BiomeChoice.Unknown,all));
+            Program.Assert(!BiomeAccess.IsDiscovered((BiomeChoice)99,-1));
+        });
+        test("tooltip disclosure across every discovery mask contains no future biome", () =>
+        {
+            for(int flags=0;flags<512;flags++)
+            {
+                int discovered=flags<<1;
+                for(int choice=1;choice<=9;choice++)
+                    Program.Assert(BiomeAccess.IsDiscovered((BiomeChoice)choice,discovered)==((discovered & Bit((BiomeChoice)choice))!=0));
+                foreach(var option in BiomeAccess.Options(discovered,all,true))
+                    if(option.Choice!=BiomeChoice.All && option.Choice!=BiomeChoice.Unknown)
+                        Program.Assert(BiomeAccess.IsDiscovered(option.Choice,discovered));
+            }
+        });
         test("new enum bits fail closed", () =>
         {
             Program.Assert(!BiomeAccess.CanSelect((BiomeChoice)99, -1, -1, true));

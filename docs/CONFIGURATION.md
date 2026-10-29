@@ -21,7 +21,7 @@ Station filters/sort/search retain per-station session state. Inventory Craft st
 
 ## Tracker
 
-`BepInEx/config/io.github.zinnkio.craftyqol/tracker/<characterHex>-<worldHex>.json` stores v1 pins, insertion order, alternative/quality choices, expanded notes, normalised position, minimised state, tab, hide-completed and `keepVisible`. The display pin defaults false and is independent of recipe pins/favourites. No reorder control. One direct craft per pin respects actual input quantities/output amounts; no recursive ingredient expansion or chest search.
+`BepInEx/config/io.github.zinnkio.craftyqol/tracker/<characterHex>-<worldHex>.json` stores v1 pins, insertion order, alternative/quality choices, expanded notes, normalised position, minimised state, tab, hide-completed and `keepVisible`. New tracker documents default to top centre (normalised x0.5/y0, existing8-unit margin). Existing stored positions are retained by the plugin; use Settings to drag. The display pin defaults false and is independent of recipe pins/favourites. No reorder control. One direct craft per pin respects actual input quantities/output amounts; no recursive ingredient expansion or chest search.
 
 Missing/changed/unknown recipes remain anonymous/removable and excluded from totals. Creative inventory pins resolve only under current native availability/grants; strict knowledge resumes when those end. Character/world IDs scope preferences; no saves are read or edited directly.
 

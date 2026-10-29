@@ -1,11 +1,11 @@
 # Manual acceptance
 
-Offline checks are prerequisites, not proof of UI/gameplay/multiplayer safety. Use disposable test items/world for safety cases. Renamed0.18.0 still needs runtime validation.
+Offline checks are prerequisites, not proof of UI/gameplay/multiplayer safety. Use disposable test items/world for safety cases. Current0.18.2 changes the new default to top centre; check fresh/default position, inventory open/close, Settings dragging and saved custom position. User confirmed the tracker was already visible; there is no layering/visibility change in this version. Prior0.18.1 tooltip secrecy remains implemented.
 
 ## Crafting/tracker
 
 - [ ] Seven stations plus inventory Craft: categories/overlaps, independent sorts, search/clear/IME, favourites/pins. Actual crafting quantities/requirements/outputs remain vanilla. Upgrade/Repair/unrelated interfaces retain ordering/selection/layout.
-- [ ] Food/Equipment biome disclosure/selection/reset; mixed/partial/Misc provenance; unknown names/colours/future slots hidden. Mead effects/no food badges or biomes. Long names/empty results/native scrolling/selection valid.
+- [ ] Food/Equipment biome disclosure/selection/reset; mixed/partial/Misc filtering; named filter tooltips only for discovered biomes, including discovered/no-recipe disabled choices; unknown names/colours/future slots hidden. Recipe tooltips contain no biome associations, provenance or disclosure placeholder; nutritional stats/category information remain. Mead effects/no food badges or biomes. Long names/empty results/native scrolling/selection valid.
 - [ ] Inventory actual no-cost on/off while open, debugmode alone, world NoCraftCost and AllRecipesUnlocked separately. Native availability/manual session disclosure, five families/categories/large lists; no stale creative disclosure.
 - [ ] Cross-view canonical favourite/pin identity, restart/scoped preferences, unknown/modded/changed restoration and creative-only pins anonymised on exit. Carried-only totals/quality/alternative planning/output information.
 - [ ] Tracker tabs/Settings/Done/minimise/recipe controls in inventory/chest/stations/Upgrade. Drag/display-pin/hide-completed, closed unpinned hidden/pinned passive. Position/size across host/scales; dragging/split/modals/map/menu/loading/death input guards. Normal inventory binding/controller entry/Submit/back.

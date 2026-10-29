@@ -1,87 +1,61 @@
 # CraftyQoL
 
-Native crafting navigation, persistent recipe tracking and storage organisation for **Valheim**.
+Craft faster. Find recipes, track materials and organise storage without leaving Valheim's native UI.
 
-CraftyQoL extends the game's existing interfaces with compact controls. It filters the recipes Valheim already provides; it never unlocks recipes or replaces crafting requirements. Storage sorting is an explicit operation on the opened container, using native inventory persistence and synchronisation.
+**AI disclosure:** CraftyQoL was created using OpenAI Codex, with maintainer-led in-game testing and feedback.
 
-**Version:** 0.18.0 · **Target inspected:** Valheim 1.0.21 / Unity 6000.0.75f1 · **Plugin:** `io.github.zinnkio.craftyqol`
+**[Download the latest release](https://github.com/zinnkio/CraftyQoL/releases/latest)** · [Installation](docs/INSTALLATION.md) · [Report a bug](https://github.com/zinnkio/CraftyQoL/issues/new)
 
-This is the first public preview. The renamed Release build passes 690 offline checks. Earlier builds received user confirmation for station UI, normal inventory filters, storage sorting and the tracker click repair. Creative-mode transitions, exhaustive storage data safety, controller/scaling and non-host multiplayer acceptance remain open; compilation is not runtime verification.
+**Valheim 1.0.21** · **BepInExPack 5.4.2351** · **Client-side**
 
 ## Features
 
-- **Food:** overlapping Health, Stamina and Eitr categories; independent descending stat sorting or vanilla Game order; recipe stat indicators. A positive stat qualifies at 50% of the food's highest stat. Intermediate cooking products use verified finishing relationships.
-- **Mead:** All, Healing, Stamina, Eitr, Resistance and Other, classified through effects and fermentation metadata. Game/A-Z sorting; no food badges or biome selector.
-- **Equipment:** All, Weapons, Armour, Shields, Tools, Ammunition, Magic and Other, with overlapping categories and native icons. Game/A-Z sorting.
-- **Search and favourites:** case-insensitive localised-name search, a compact clear action, row-star favourites and an independent favourites-only filter. Stable identities and plugin-owned preference files.
-- **Biome filters:** collapsed food/equipment palettes expose confirmed discoveries only. Multi-biome, partial and uncertain associations retain their provenance; Misc is the fallback. Discovery is never inferred from available recipes.
-- **Recipe tracker:** pin several recipes independently of favourites. Aggregate carried materials as `owned/required`, or expand individual recipe notes. Native item icons, scrolling, minimisation and a movable panel. Settings contains a separate display pin to keep the tracker visible during gameplay. Pins/preferences are scoped to character/world without editing their saves.
-- **Inventory Craft:** an adaptive Filters toggle with All/Equipment/Food/Mead/Other families and contextual categories. Actual no-cost flags can auto-expand it; `debugmode` alone cannot. Manual expansion wins for the current inventory session. Uses only vanilla-provided recipes, including creative availability when actually granted.
-- **Storage Sort & Stack:** one explicit Category sort, conservative partial-stack consolidation and consecutive top-left packing. Never sorts player inventory/hotbar or transfers items between containers.
+- **Find recipes:** search localised names, sort recipes and save favourites.
+- **Food filters:** overlapping Health, Stamina and Eitr categories with independent stat sorting.
+- **Mead and equipment filters:** potion-effect categories and native equipment-category icons.
+- **Spoiler-aware biomes:** filter by discovered biomes only. Future biome names stay hidden; recipe tooltips omit biome classifications.
+- **Recipe tracker:** pin multiple recipes, combine their carried-material requirements and check progress as `owned/required`. Drag the panel in Settings or pin it on-screen during gameplay. New trackers start at top centre.
+- **Inventory crafting:** compact filters with contextual categories, including large no-cost crafting lists.
+- **Sort & Stack:** explicitly organise the opened container by category and consolidate compatible stacks. Player inventory and hotbar stay untouched.
 
-## Supported crafting interfaces
+Works with **Cauldron, Food Preparation Table, Mead Ketill, Workbench, Forge, Black Forge, Galdr Table** and the stationless inventory Craft panel. Crafting requirements and progression remain vanilla; Upgrade and Repair are unchanged.
 
-| Interface | Mode |
-| --- | --- |
-| Inventory Craft, without a workstation | Recipe families and contextual filters |
-| Cauldron | Food |
-| Food Preparation Table | Food |
-| Mead Ketill | Mead |
-| Workbench | Equipment |
-| Forge | Equipment |
-| Black Forge | Equipment |
-| Galdr Table | Equipment |
+Storage support includes standard chests, barrel, grausten chest, wardrobe, parked carts, Karve, Longship and Drakkar. [Compatibility details](docs/COMPATIBILITY.md).
 
-Station filtering is restricted to **Craft**. Upgrade, Repair and unrelated station recipe lists retain vanilla behaviour. The tracker can remain visible across inventory, chests and station tabs.
+## Install
 
-Storage support is restricted to seven verified wood/reinforced/black-metal/personal/barrel/grausten/wardrobe containers, parked Cart, Karve, Longship and Drakkar. Unsupported storage, tombstones and auto-destroy loot containers decline sorting. See [compatibility](docs/COMPATIBILITY.md).
+1. Install [BepInExPack for Valheim](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/) and close the game.
+2. Download **CraftyQoL-0.18.2.zip** from the [release page](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.2).
+3. Open the ZIP and copy its **BepInEx** folder into your Valheim installation, merging with the existing folder. The DLL belongs at `BepInEx/plugins/CraftyQoL/CraftyQoL.dll`.
+4. Launch Valheim. No server installation is needed.
 
-## Installation and controls
+A standalone DLL is also available on the release page. Updating CraftyQoL preserves its settings, favourites and pins. If replacing the old Food Crafting UI development build, remove its DLL from the active plugins folder so both versions do not load together; keep it elsewhere for rollback.
 
-1. Install the separately supplied [BepInExPack for Valheim](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/). Qualified pack: **5.4.2351** (BepInEx 5.4.23.5, Harmony 2.9.0.0).
-2. With Valheim closed, put your built `CraftyQoL.dll` in `BepInEx/plugins/CraftyQoL/`.
-3. Remove the previous development plugin DLL from the active plugin search path if upgrading from Food Crafting UI; do not run both. Preserve it elsewhere for rollback. Existing configuration files and game saves do not need deletion.
-4. Launch normally and check `BepInEx/LogOutput.log` for CraftyQoL 0.18.0.
-
-No server installation, Jotunn or custom networking is required. Other players do not need CraftyQoL; storage uses native replication, but remote visibility/persistence still need multiplayer tests. Windows PC is the inspected platform; other platforms/versions are unqualified.
+## Controls
 
 | Action | Control |
 | --- | --- |
-| Search | Click Search; Ctrl+F focuses/expands it; X clears |
-| Favourite | Recipe-row star; search-row star filters favourites |
-| Pin/unpin recipe | Pushpin beside Craft or Ctrl+P |
-| Interact with tracker | Open inventory with its normal binding, usually Tab |
-| Move tracker / keep visible | Tracker Settings; drag header / select display pin; Done exits settings |
-| Sort opened storage | Sort in its native header |
-| Controller | Explicit toolbar/row navigation; tracker shoulder entry from final inventory group; storage Up from top row; Submit, B/shoulders return |
+| Search | Search field or Ctrl+F; X clears |
+| Favourite | Star beside a recipe; toolbar star filters favourites |
+| Track a recipe | Pushpin beside Craft or Ctrl+P |
+| Use the tracker | Open inventory with its normal binding, usually Tab |
+| Move or keep tracker visible | Tracker Settings: drag the header or select the display pin |
+| Organise storage | Sort button in the opened container header |
 
-The old F8 edit mode is retired. Controller mappings and UI scales require manual validation. Details: [installation](docs/INSTALLATION.md), [configuration](docs/CONFIGURATION.md), [manual checks](docs/MANUAL_TESTS.md).
+Saved tracker positions are retained. [Configuration and preferences](docs/CONFIGURATION.md) · [Full installation guide](docs/INSTALLATION.md).
 
-## Persistence and safety
+## Compatibility
 
-Configuration: `BepInEx/config/io.github.zinnkio.craftyqol.cfg`. Favourites, biome overrides and scoped tracker preferences live under `BepInEx/config/io.github.zinnkio.craftyqol/`. The rebrand starts fresh; no previous development settings are migrated or deleted.
+Windows PC / Valheim 1.0.21 is the supported baseline. Only clients using the mod need BepInEx/CraftyQoL; storage uses vanilla synchronisation.
 
-Storage merging requires matching prefab/shared references and exact native properties, within actual stack maxima. **Nonempty custom-data stacks never merge**, even when dictionaries match. Unknown schemas/subclasses, foreign critical patches/callbacks, dragging, invalid access/ownership and unsettled saved contents decline sorting. Source/proposed layout are validated before one native change notification. No direct save-file access, ownership bypass or custom RPC. See [design](docs/DESIGN.md).
+Other crafting organisers or inventory mods may conflict. Sorting declines unsupported or unsafe inventories, and stacks with custom item data remain separate. Creative mode, controller/UI-scale combinations and non-host multiplayer have not been exhaustively tested. [Known limitations](docs/COMPATIBILITY.md).
 
-## Building and validation
+## Thanks
 
-Use .NET SDK **10.0.402** (pinned in `global.json`), a legitimate Valheim 1.0.21 installation and separately acquired BepInEx core references. Plugin target: .NET Framework 4.7.2; test host: .NET 10. No game/Unity/loader assemblies or extracted assets are included.
+Thanks to **[CraftIndex](https://github.com/jg224/CraftIndex)** by **jg224** and **[CraftSort](https://github.com/GrandpaUA/CraftSort)** by **GrandpaUA**. Auditing these projects helped identify Valheim APIs and compatibility considerations. CraftyQoL is independently implemented; their source code and assets are not included.
 
-Copy `Environment.props.example` to ignored `Environment.props` and supply installation/reference paths. Then:
+Thanks also to the [BepInEx](https://github.com/BepInEx/BepInEx) and [HarmonyX](https://github.com/BepInEx/HarmonyX) maintainers.
 
-```powershell
-.\tools\dotnet.ps1 build CraftyQoL.sln -c Release --nologo
-.\tools\dotnet.ps1 run --project tests/CraftyQoL.Tests -c Release --no-build
-```
+[Build from source](docs/BUILDING.md) · [Development history](docs/DEVELOPMENT_HISTORY.md) · [MIT licence](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
 
-Output: `src/CraftyQoL/bin/Release/net472/CraftyQoL.dll`. [Building from source](docs/BUILDING.md) covers native-API/compiled-plugin checks, references and packaging. No build/package script installs, launches or changes the game.
-
-Rename verification: **688 regression/API/compiled-plugin + 2 tooltip checks**, zero build warnings/errors. Pure/static checks do not establish rendering, creative transitions, network safety or Unity frame performance. Follow [manual acceptance](docs/MANUAL_TESTS.md), including non-host player-hosted and dedicated servers with unmodded observers.
-
-## Project
-
-- [Development history](docs/DEVELOPMENT_HISTORY.md) — chronological pre-publication milestones and evidence limits.
-- [Architecture](docs/DESIGN.md) · [Compatibility](docs/COMPATIBILITY.md) · [Changelog](CHANGELOG.md).
-- [MIT licence](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md).
-
-Independently implemented; not affiliated with Iron Gate or Coffee Stain. No proprietary game source/assets redistributed.
+Not affiliated with Iron Gate or Coffee Stain. Game assets and dependencies are not bundled.

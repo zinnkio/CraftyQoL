@@ -59,6 +59,18 @@ internal static class TrackerTests
             }
             Program.Assert(!new TrackerLayout(120,120).CanFit && !new TrackerLayout(float.NaN,720).CanFit);
         });
+        test("fresh tracker position is top-centred across screen sizes and panel heights",()=>
+        {
+            var state=new TrackerDocument();
+            Program.Assert(state.X==0.5f && state.Y==0f && !state.KeepVisible);
+            foreach(var size in new[]{(width:1920f,height:1080f),(width:2560f,height:1440f),(width:3440f,height:1440f),(width:800f,height:600f)})
+                foreach(float height in new[]{26f,130f,300f})
+                {
+                    var layout=new TrackerLayout(size.width,size.height,height);
+                    Program.Assert(Math.Abs(layout.Left(state.X)+layout.Width/2-size.width/2)<0.001f);
+                    Program.Assert(layout.Top(state.Y)==8f);
+                }
+        });
         test("inventory default, pinned gameplay and safety guards compose independently",()=>
         {
             foreach(bool allowed in new[]{false,true})

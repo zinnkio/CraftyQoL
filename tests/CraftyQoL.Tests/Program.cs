@@ -29,6 +29,8 @@ internal static class Program
         {StorageTests.Run(Check);Console.WriteLine($"{_passed} storage checks passed; {_failed} failed. No game code executed.");return _failed==0?0:1;}
         if(args.Contains("--inventory-only"))
         {InventoryTests.Run(Check);Console.WriteLine($"{_passed} inventory checks passed; {_failed} failed. No game code executed.");return _failed==0?0:1;}
+        if(args.Contains("--biome-ui-only"))
+        {BiomeAccessTests.Run(Check);Console.WriteLine($"{_passed} biome disclosure checks passed; {_failed} failed. No game code executed.");return _failed==0?0:1;}
         if(args.Contains("--visual-only"))
         {VisualStyleTests.Run(Check);ToolbarGeometryTests.Run(Check);Console.WriteLine($"{_passed} visual/geometry checks passed; {_failed} failed. No Unity code executed.");return _failed==0?0:1;}
         if(args.Contains("--compatibility-121"))
@@ -212,11 +214,11 @@ internal static class Program
         using (AssemblyDefinition assembly = AssemblyDefinition.ReadAssembly(path))
         {
             var module=assembly.MainModule;
-            Assert(assembly.Name.Name=="CraftyQoL" && assembly.Name.Version==new Version(0,18,0,0),"Rebranded assembly identity mismatch");
+            Assert(assembly.Name.Name=="CraftyQoL" && assembly.Name.Version==new Version(0,18,2,0),"Rebranded assembly identity mismatch");
             var identity=module.GetType("CraftyQoL.Plugin");
             Assert((string)identity.Fields.Single(f=>f.Name=="Id").Constant=="io.github.zinnkio.craftyqol" && (string)identity.Fields.Single(f=>f.Name=="Name").Constant=="CraftyQoL","Rebranded plugin/config identity mismatch");
             var declared=identity.CustomAttributes.Single(a=>a.AttributeType.FullName=="BepInEx.BepInPlugin").ConstructorArguments;
-            Assert((string)declared[0].Value=="io.github.zinnkio.craftyqol" && (string)declared[1].Value=="CraftyQoL" && (string)declared[2].Value=="0.18.0","BepInEx identity metadata mismatch");
+            Assert((string)declared[0].Value=="io.github.zinnkio.craftyqol" && (string)declared[1].Value=="CraftyQoL" && (string)declared[2].Value=="0.18.2","BepInEx identity metadata mismatch");
             Assert(module.Types.All(t=>t.Namespace=="" || t.Namespace=="System.Runtime.CompilerServices" || t.Namespace=="Microsoft.CodeAnalysis" || t.Namespace=="CraftyQoL" || t.Namespace.StartsWith("CraftyQoL.",StringComparison.Ordinal)),"Unexpected runtime namespace");
             var allowed = new HashSet<string>(new[] { "InventoryGui.UpdateCraftingPanel", "InventoryGui.UpdateRecipeList", "InventoryGui.Update", "InventoryGui.Hide", "InventoryGui.OnDestroy",
                 "ZInput.GetButtonDown", "ZInput.GetKeyDown", "UIGamePad.ButtonPressed", "PlayerController.TakeInput" }, StringComparer.Ordinal);
@@ -241,6 +243,12 @@ internal static class Program
             Assert(iconCalls.Any(m => m.Name == "GetItemPrefab") && iconCalls.Any(m => m.Name == "GetIcon"), "Category sprites must use native item APIs");
             Assert(!iconCalls.Any(m => m.Name == "FindObjectsOfTypeAll" || m.Name == "LoadImage"), "Category icons must not scan global resources or import textures");
             var rows = assembly.MainModule.GetType("CraftyQoL.RowDecoration");
+            var rowTooltip=rows.Methods.Single(m=>m.Name=="Tooltip").Body.Instructions;
+            Assert(!rowTooltip.Any(i=>i.Operand is FieldReference f && f.DeclaringType.FullName=="CraftyQoL.Core.RecipeInfo" && f.Name=="Biome"),"Recipe tooltips must not access biome classification");
+            Assert(!rowTooltip.Any(i=>i.Operand is MethodReference m && m.DeclaringType.Name=="BiomeDiscovery" || i.Operand is string text && text.IndexOf("biome",StringComparison.OrdinalIgnoreCase)>=0),"Recipe tooltip biome disclosure remains");
+            var paletteOps=toolbar.Methods.Concat(toolbar.NestedTypes.SelectMany(t=>t.Methods)).Where(m=>m.HasBody && (m.Name=="RebuildPalette" || m.Name.StartsWith("<RebuildPalette>",StringComparison.Ordinal))).SelectMany(m=>m.Body.Instructions);
+            Assert(paletteOps.Any(i=>i.Operand is MethodReference m && m.Name=="IsDiscovered"),"Biome names/tooltips must require explicit discovery");
+
             Assert(!rows.Methods.Where(m => m.HasBody).SelectMany(m => m.Body.Instructions).Any(i => i.Operand is string text && text == "~ "), "Estimated names must not acquire a tilde prefix");
             var rounded=assembly.MainModule.GetType("CraftyQoL.RoundedImage");
             Assert(rounded.BaseType.FullName=="UnityEngine.UI.BaseMeshEffect" && !rounded.Methods.Any(m=>m.Name=="Update" || m.Name=="LateUpdate"));
@@ -248,7 +256,6 @@ internal static class Program
             Assert(!rounded.Methods.Where(m=>m.HasBody).SelectMany(m=>m.Body.Instructions).Any(i=>i.Operand is MethodReference m && (m.Name=="set_sprite" || m.Name=="set_material")),"Rounding must retain native sprite/material");
             var tooltipStyle=assembly.MainModule.GetType("CraftyQoL.TooltipBackground");
             Assert(tooltipStyle.Methods.Single(m=>m.Name=="Restore").Body.Instructions.Any(i=>i.Operand is MethodReference m && m.Name=="set_richText"));
-            var rowTooltip=rows.Methods.Single(m=>m.Name=="Tooltip").Body.Instructions;
             foreach(string stat in new[]{"Health","Stamina","Eitr"})Assert(rowTooltip.Any(i=>i.Operand is FieldReference f && f.Name==stat),"Missing stat palette "+stat);
             var view = assembly.MainModule.GetType("CraftyQoL.FoodView");
             Assert(view.Methods.Single(m=>m.Name=="Suspend").Body.Instructions.Any(i=>i.Operand is MethodReference m && m.DeclaringType.FullName=="CraftyQoL.CraftButtonStyle" && m.Name=="Dispose"),"Native controls must restore on Upgrade/unsupported/close");

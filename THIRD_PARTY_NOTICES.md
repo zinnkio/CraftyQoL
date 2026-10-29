@@ -1,11 +1,15 @@
-# Independent source and external dependencies
+# Third-party notices and acknowledgements
 
-The original CraftyQoL source and documentation are under the accompanying MIT licence. That licence does not grant rights to Valheim, Unity, loader libraries, development tools or reference projects.
+CraftyQoL's original source/documentation use the accompanying MIT licence. Its historical copyright notice is preserved. This grants no rights to Valheim, Unity or external dependencies.
 
-The test package contains only our compiled plugin and original documents. It contains no extracted game assets, game/Unity/BepInEx/Harmony assemblies or reference-mod source. Native fonts/sprites are referenced from the running game rather than redistributed.
+## Technical references
 
-Runtime dependencies are installed separately: Valheim and its Unity runtime; the denikson BepInExPack_Valheim pack and bundled HarmonyX. Their respective licences and upstream notices apply. Development-only tools include Microsoft's .NET SDK/reference packages, ILSpy, Mono.Cecil and UnityPy with its dependencies; these are not included in the plugin package. Qualified versions are in docs/BUILDING.md; dependencies/tools are acquired separately.
+Thank you to [CraftIndex](https://github.com/jg224/CraftIndex) by jg224 (MIT) and [CraftSort](https://github.com/GrandpaUA/CraftSort) by GrandpaUA (AGPL-3.0). Their public implementations were audited to identify Valheim APIs, general approaches and compatibility limitations.
 
-CraftIndex (jg224, MIT) and CraftSort (GrandpaUA, AGPL-3.0) were inspected as technical references for public game APIs and compatibility limitations. No source files, code fragments, custom icons or assets from either project were incorporated, and this project is not a fork or an adapter incorporating CraftSort. Upstream projects do not endorse this work.
+CraftyQoL is independently implemented. No source files, code fragments, custom icons or other assets from either project are incorporated; no AGPL-covered CraftSort source is included. Neither upstream project endorses CraftyQoL.
 
-The historical copyright notice in LICENSE is intentionally preserved. No new licence was selected. Mono.Cecil is test-only and not bundled in public source or the runtime plugin.
+## Dependencies
+
+[BepInEx](https://github.com/BepInEx/BepInEx), its separately supplied Valheim pack, and [HarmonyX](https://github.com/BepInEx/HarmonyX) provide the runtime modding infrastructure. Their licences/notices apply to their own distributions. .NET and [Mono.Cecil](https://github.com/jbevain/cecil) are acquired separately for development/testing; Mono.Cecil is not a plugin runtime dependency.
+
+No game/Unity/loader assemblies, reference-mod source or extracted game assets are bundled. Native UI assets are referenced in the running game.

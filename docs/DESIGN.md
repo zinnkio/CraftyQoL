@@ -10,6 +10,8 @@ RecipeMetadata, food/Mead graphs and equipment classifiers cache static facts. P
 
 Nine Harmony targets: InventoryGui.UpdateCraftingPanel, UpdateRecipeList, Update, Hide, OnDestroy; ZInput.GetButtonDown, GetKeyDown; UIGamePad.ButtonPressed; PlayerController.TakeInput. Scoped/finalizer guards limit interception to owned controls. No transpilers.
 
+Biome palette label/tooltip lookup is explicitly gated by player discovery before resolving a name. All/Misc are neutral controls. Recipe-row tooltips show names/nutrition/equipment-or-potion categories only; biome associations/provenance remain internal filter metadata. No discovery-triggered row-tooltip reconstruction is needed.
+
 ## Tracker
 
 RecipeTracker/TrackerCatalogue/pure math resolve scoped stable pins and aggregate carried direct materials only. Inventory notifications invalidate counts; knowledge/availability protect restoration/creative exit. Missing/unavailable pins remain anonymous in storage. Favourites/recipe pins have separate stores; display pin is a separate preference.

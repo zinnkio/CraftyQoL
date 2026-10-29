@@ -25,12 +25,9 @@ namespace CraftyQoL
         private readonly bool _addedTooltip;
         private readonly string _oldTooltip;
         private string _writtenTooltip = "";
-        private readonly RecipeInfo _info;
-        private readonly bool _equipment, _mead, _generic;
 
-        internal RowDecoration(InventoryGui gui, RecipeRow row, BiomeChoice activeBiome, int discovered, bool favourite, Action toggle, bool equipment = false, bool mead = false,bool generic=false)
+        internal RowDecoration(InventoryGui gui, RecipeRow row, bool favourite, Action toggle, bool equipment = false, bool mead = false,bool generic=false)
         {
-            _info = row.Info; _equipment = equipment; _mead = mead; _generic=generic;
             Key = row.Info.Key; _persistable = row.Info.Persistable;
             _icon = row.Element.transform.Find("icon") as RectTransform ?? throw new NotSupportedException("Native row icon unavailable.");
             _name = row.Element.transform.Find("name").GetComponent<TMP_Text>();
@@ -81,7 +78,7 @@ namespace CraftyQoL
                 _addedTooltip = existing == null;
                 _tooltip = UiStyle.Tooltip(gui, row.Element);
                 _oldTooltip = _tooltip.m_text;
-                _writtenTooltip = Tooltip(row.Info, discovered, equipment, mead,generic);
+                _writtenTooltip = Tooltip(row.Info, equipment, mead,generic);
                 _tooltip.m_text = _writtenTooltip;
             }
             catch
@@ -108,12 +105,7 @@ namespace CraftyQoL
                 (favourite ? "Remove favourite" : "Add favourite") + (saveFailed ? "\nChanges are in memory; saving failed" : "");
             Favourite.GetComponent<UITooltip>().Set("", message);
         }
-        internal void RefreshDiscovery(int discovered)
-        {
-            if (!_tooltip || _tooltip.m_text != _writtenTooltip) return;
-            _writtenTooltip = Tooltip(_info, discovered, _equipment, _mead,_generic); _tooltip.Set(_tooltip.m_topic, _writtenTooltip);
-        }
-        private static string Tooltip(RecipeInfo info, int discovered, bool equipment, bool mead,bool generic=false)
+        private static string Tooltip(RecipeInfo info, bool equipment, bool mead,bool generic=false)
         {
             var text = new StringBuilder(info.Name);
             if(generic)text.Append("\nOther recipe");
@@ -126,18 +118,6 @@ namespace CraftyQoL
                 text.Append(info.Nutrition == NutritionSource.Feast ? "\nPer serving: " : info.Nutrition == NutritionSource.Cooked ? "\nAfter cooking: " : "\nNutrition: ");
                 text.Append(UiStyle.StatText("Health "+Number(info.Food.Health),UiStyle.Health)).Append(" / ").Append(UiStyle.StatText("Stamina "+Number(info.Food.Stamina),UiStyle.Stamina)).Append(" / ").Append(UiStyle.StatText("Eitr "+Number(info.Food.Eitr),UiStyle.Eitr));
             }
-            text.Append("\nDiscovered biome associations: ");
-            if (info.Biome.Mask == 0) text.Append("Misc");
-            else if (BiomeAccess.Revealed(info.Biome.Mask, discovered) == 0) text.Append("Not disclosed");
-            else
-            {
-                bool first = true;
-                foreach (BiomeChoice biome in Enum.GetValues(typeof(BiomeChoice)))
-                    if (biome != BiomeChoice.All && biome != BiomeChoice.Unknown && (BiomeAccess.Revealed(info.Biome.Mask, discovered) & BiomeAssociation.Bit(biome)) != 0)
-                    { if (!first) text.Append(", "); text.Append(BiomeDiscovery.Name(biome)); first = false; }
-            }
-            // Feedback contains no ingredient identities or unrevealed biome names/counts.
-            text.Append(" (").Append(info.Biome.Explanation).Append(")");
             return text.ToString();
         }
         private static string Number(double? value) => value.HasValue ? value.Value.ToString("0.##", CultureInfo.CurrentCulture) : "?";

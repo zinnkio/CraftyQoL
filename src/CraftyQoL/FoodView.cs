@@ -222,7 +222,7 @@ namespace CraftyQoL
                     RecipeRow row = _rows[i];
                     pairs[i] = row.Pair;
                     ((RectTransform)row.Element.transform).anchoredPosition = new Vector2(0, -i * _gui.m_recipeListSpace);
-                    var decoration = new RowDecoration(_gui, row, _applied.Biome, _discovered, Plugin.Instance!.Favourites.Keys.Contains(row.Info.Key), () => ToggleFavourite(row.Info),
+                    var decoration = new RowDecoration(_gui, row, Plugin.Instance!.Favourites.Keys.Contains(row.Info.Key), () => ToggleFavourite(row.Info),
                         _applied.Inventory?row.Info.Family!=RecipeFamily.Food && row.Info.Family!=RecipeFamily.Mead:_applied.Equipment,
                         _applied.Inventory?row.Info.Family==RecipeFamily.Mead:_applied.Mead,
                         _applied.Inventory && row.Info.Family==RecipeFamily.Other);
@@ -274,7 +274,6 @@ namespace CraftyQoL
             if (discovered == _discovered) return;
             _discovered = discovered;
             if (updatePalette) _toolbar?.SetDiscovery(discovered);
-            foreach (RowDecoration row in _decorations) row.RefreshDiscovery(discovered);
         }
         private void Update()
         {

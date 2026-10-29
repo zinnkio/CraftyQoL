@@ -332,7 +332,9 @@ namespace CraftyQoL
                     { focusedChoice = _choices[i]; break; }
             _paletteReady = true;
             List<BiomeOption> options = BiomeAccess.Options(_discovered, _available, _unknown);
-            options.RemoveAll(option => option.Choice == BiomeChoice.All); // Presentation only; policy/selection semantics unchanged.
+            // All/Misc are neutral controls. Only confirmed biome identities may reach name/tooltip lookup.
+            options.RemoveAll(option => option.Choice == BiomeChoice.All ||
+                option.Choice != BiomeChoice.Unknown && !BiomeAccess.IsDiscovered(option.Choice, _discovered));
             _visibleOptions = options.Count;
             for (int i = 0; i < _palette.Length; i++)
             {

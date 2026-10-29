@@ -12,6 +12,11 @@ namespace CraftyQoL.Core
     {
         internal const int KnownBits = (1 << 10) - 2;
         internal static int Revealed(int association, int discovered) => association & discovered & KnownBits;
+        internal static bool IsDiscovered(BiomeChoice choice, int discovered)
+        {
+            int index = (int)choice;
+            return index >= 1 && index <= 9 && Revealed(BiomeAssociation.Bit(choice), discovered) != 0;
+        }
         internal static bool CanSelect(BiomeChoice choice, int discovered, int available, bool unknown)
         {
             if (choice == BiomeChoice.All) return true;
@@ -27,7 +32,7 @@ namespace CraftyQoL.Core
             for (int i = 1; i <= 9; i++)
             {
                 var choice = (BiomeChoice)i;
-                if ((discovered & BiomeAssociation.Bit(choice)) != 0)
+                if (IsDiscovered(choice, discovered))
                     options.Add(new BiomeOption(choice, CanSelect(choice, discovered, available, unknown)));
             }
             options.Add(new BiomeOption(BiomeChoice.Unknown, unknown));

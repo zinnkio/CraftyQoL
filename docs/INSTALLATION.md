@@ -1,20 +1,28 @@
-# Installation and controls
+# Installation
 
-Target: Valheim **1.0.21**, Unity **6000.0.75f1**, BepInExPack_Valheim **5.4.2351**. Windows PC is inspected. Client plugin; servers/other players need not install it.
+Requires Valheim **1.0.21** and [BepInExPack_Valheim **5.4.2351**](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/). Client-side; no server installation required.
 
-1. Install BepInEx separately. Build `CraftyQoL.dll` from [source](BUILDING.md), or use an audited release DLL if provided.
-2. Close Valheim normally. Put only `CraftyQoL.dll` under `BepInEx/plugins/CraftyQoL/`.
-3. Replacing Food Crafting UI development builds: move the old DLL out of the active plugin tree and keep for rollback. Never load both identities. Do not delete other mods/configurations or saves.
-4. Launch and inspect `BepInEx/LogOutput.log` for CraftyQoL0.18.0. New identity starts fresh; no old-plugin migration/deletion.
+## Install or update
 
-Controls appear in supported Craft tabs and stationless inventory Craft. Upgrade/Repair/unrelated recipes remain native. Click category/sort buttons. Ctrl+F opens/focuses Search; X clears. Row stars toggle favourites; search-row star filters. Pushpin beside Craft or Ctrl+P toggles a recipe pin.
+1. Close Valheim and install BepInEx if needed.
+2. Download **CraftyQoL-0.18.2.zip** from [GitHub Releases](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.2).
+3. Copy the ZIP's **BepInEx** folder into your Valheim folder, merging with the existing folder. Copy only that folder; the remaining ZIP files are documentation/provenance.
+4. Confirm `BepInEx/plugins/CraftyQoL/CraftyQoL.dll` exists, then launch normally.
 
-Open inventory (normal binding, usually Tab) to use tracker Materials/Recipes and recipe controls. Settings exposes dragging, hide-completed and display pin. Selected gold display pin keeps the panel passive during gameplay; Done leaves Settings. F8 mode is retired.
+For a manual DLL installation, put the release's standalone `CraftyQoL.dll` at the same path. Keep one copy of the plugin. Settings, favourites and recipe pins are retained when updating CraftyQoL.
 
-Storage **Sort** affects only the current qualified container. Custom-data stacks remain separate. Uncertain access/ownership/synchronisation/incompatible mods disable or decline sorting; see tooltip/log.
+Replacing the old Food Crafting UI development plugin: move its old DLL outside the active plugins folder before installing. The rebranded identity has separate preferences; old settings are not deleted or automatically migrated.
 
-Controller: native toolbar/recipe routes, tracker shoulder entry from final inventory group, storage Up from top row; Submit activates, B/shoulders return. Normal inventory close remains available. Controller/scaling acceptance is manual.
+## Quick start
 
-Uninstall with game closed by removing only CraftyQoL's DLL. Retain preferences if desired. Roll back a preserved known DLL with game closed; identities have separate preferences. Never edit world/character saves to install/reset/remove.
+Open a supported Craft tab or inventory Craft to use filters, search and favourites. Click a recipe's pushpin or Ctrl+P to track it. Open inventory (usually Tab) to use the tracker; Settings enables dragging and the separate display pin. New trackers start top-centre; saved positions stay where you put them.
 
-[Configuration](CONFIGURATION.md) · [Compatibility](COMPATIBILITY.md) · [Manual acceptance](MANUAL_TESTS.md).
+Open storage and press Sort for category sorting/stack consolidation. Custom-data stacks remain separate. Upgrade/Repair and crafting rules stay vanilla.
+
+## Troubleshooting and removal
+
+Check `BepInEx/LogOutput.log` for CraftyQoL 0.18.2. Confirm the game/loader version, a single installed copy and no conflicting recipe/inventory organiser. Unsupported storage or uncertain native access/ownership/synchronisation declines sorting.
+
+To uninstall or roll back, close the game and remove/replace only CraftyQoL's DLL. Preserve plugin configuration if desired; no character/world save edits are needed. [Report an issue](https://github.com/zinnkio/CraftyQoL/issues/new) with versions, steps and a relevant log excerpt, removing personal details first.
+
+[Configuration](CONFIGURATION.md) · [Compatibility](COMPATIBILITY.md) · [Build from source](BUILDING.md)

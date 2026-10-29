@@ -20,8 +20,8 @@ namespace CraftyQoL.Core
     {
         [DataMember(Name = "version", IsRequired = true)] public int Version = 1;
         [DataMember(Name = "pins", IsRequired = true)] public List<TrackerPin> Pins = new List<TrackerPin>();
-        [DataMember(Name = "x")] public float X = 0.02f;
-        [DataMember(Name = "y")] public float Y = 0.22f;
+        [DataMember(Name = "x")] public float X = 0.5f;
+        [DataMember(Name = "y")] public float Y = 0f;
         [DataMember(Name = "minimised")] public bool Minimised;
         [DataMember(Name = "hideCompleted")] public bool HideCompleted;
         [DataMember(Name = "recipesTab")] public bool RecipesTab;

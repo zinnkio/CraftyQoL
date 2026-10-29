@@ -94,6 +94,18 @@ A private backup preceded renaming. A separate allowlisted publication snapshot 
 
 Release builds without warnings/errors;688 full regression/API/compiled-plugin plus two tooltip checks pass, including identity and nine-patch scope. No renamed game launch/deployment is claimed. Optimisation review is local/report-only and authorises no runtime modifications.
 
+## 29 October 2026 — 0.18.1 tooltip secrecy
+
+After public preparation, biome filter naming gained an explicit player-discovery guard before tooltip lookup. Existing compact discovery-only palette/neutral reset/Misc behavior remains. Recipe-row biome associations/provenance/disclosure text were removed for food, equipment and inventory views, without altering internal classification or filtering. Nutrition and equipment/Mead categories stay visible. Twelve focused disclosure cases (including every discovery mask) and two compiled tooltip/identity/scope checks pass; rendered behavior remains manual. This local change is separate from the initial public0.18.0 snapshot.
+
+## 29 October 2026 — 0.18.2 tracker default position
+
+User retest confirmed the tracker was present, overlapping inventory at the original default. A temporary technical trace confirmed active/in-bounds UI; a render-priority inference was not sufficient evidence of a bug. Diagnostics and an uninstalled provisional change were removed. Only new-document default X/Y moved to top centre, with existing custom positions/pins preserved. Runtime source comparison against0.18.1 verified no other behavior changes;25 focused tracker/compiled UI checks passed. No public upload pending user verification.
+
+## 29 October 2026 — downloadable public release
+
+The maintainer declared the mod deployable after in-game testing and requested a downloadable GitHub release. Public-facing documentation was shortened around installation and controls, with an early AI-development disclosure and explicit thanks to CraftIndex/CraftSort as audited technical references. Version0.18.2 keeps the existing identity and tested runtime code. Release preparation adds an install ZIP, standalone DLL, checksums and public-source provenance, excludes debug symbols/private paths and retains the existing MIT licence. Automated release validation supplements maintainer feedback without claiming exhaustive creative/controller/multiplayer coverage.
+
 ## Testing/performance evolution
 
 Coverage grew from pure queries/classification/geometry to reviewed factual fixtures, exhaustive discovery masks, atomic preference recovery, tracker aggregation/knowledge/privacy and fault-injected storage transactions. Installed assembly/body and compiled-plugin contracts constrain integration without redistributing game code. Small changes use targeted checks; broader milestones use justified full regression.
