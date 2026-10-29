@@ -1,0 +1,2491 @@
+{
+  "assemblySha256": "94998885b103d6e5f5480123eaee0a093e82af2ddeeee37536c15bf555f24f3a",
+  "bundles": [
+    "86c3d76e",
+    "c4210710",
+    "d59cfac"
+  ],
+  "stations": [
+    {
+      "prefab": "piece_magetable",
+      "m_name": "$piece_magetable",
+      "m_hasCraftTab": 1,
+      "m_canRepair": 1,
+      "m_showBasicRecipies": 0
+    }
+  ],
+  "recipes": [
+    {
+      "name": "Recipe_ArmorGoldMageChest",
+      "station": "piece_magetable",
+      "output": "ArmorDeepNorthMageChest",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 1,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 7,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 22.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.6000000238418579,
+      "ingredients": [
+        {
+          "item": "Gold",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldArmorMageChest",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MooseHide",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader7Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_ArmorGoldMageChestUncooked",
+      "station": "piece_magetable",
+      "output": "ArmorGoldMageChestUncooked",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 1,
+      "skillType": 1,
+      "toolTier": 0,
+      "armor": 10.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Gold",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 15,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldArmorMageChest",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MooseHide",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_ArmorGoldMageLegs",
+      "station": "piece_magetable",
+      "output": "ArmorDeepNorthMagelegs",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 1,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 11,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 22.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.6000000238418579,
+      "ingredients": [
+        {
+          "item": "Gold",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldArmorMageLegs",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MooseHide",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader7Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_ArmorGoldMageLegsUncooked",
+      "station": "piece_magetable",
+      "output": "ArmorGoldMageLegsUncooked",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 1,
+      "skillType": 1,
+      "toolTier": 0,
+      "armor": 10.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Gold",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 15,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldArmorMageLegs",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MooseHide",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_ArmorMageChest",
+      "station": "piece_magetable",
+      "output": "ArmorMageChest",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 7,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 16.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.4000000059604645,
+      "ingredients": [
+        {
+          "item": "LinenThread",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Feathers",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "ScaleHide",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader5Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 96,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_ArmorMageChest_Ashlands",
+      "station": "piece_magetable",
+      "output": "ArmorMageChest_Ashlands",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 2,
+      "onlyOneIngredient": 0,
+      "itemType": 7,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 19.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.5,
+      "ingredients": [
+        {
+          "item": "LinenThread",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "AskHide",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "FlametalNew",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader6Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 160,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_ArmorMageLegs",
+      "station": "piece_magetable",
+      "output": "ArmorMageLegs",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 11,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 16.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.4000000059604645,
+      "ingredients": [
+        {
+          "item": "LinenThread",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "ScaleHide",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader5Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 96,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_ArmorMageLegs_Ashlands",
+      "station": "piece_magetable",
+      "output": "ArmorMageLegs_Ashlands",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 2,
+      "onlyOneIngredient": 0,
+      "itemType": 11,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 19.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.5,
+      "ingredients": [
+        {
+          "item": "LinenThread",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "AskHide",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader6Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 160,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_CapeAsksvin",
+      "station": "piece_magetable",
+      "output": "CapeAsksvin",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 2,
+      "onlyOneIngredient": 0,
+      "itemType": 17,
+      "skillType": 1,
+      "toolTier": 1,
+      "armor": 1.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "AskHide",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MorgenSinew",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader6Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 2,
+      "expectedBiomeMask": 128,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_CapeDeepNorthMage",
+      "station": "piece_magetable",
+      "output": "CapeDeepNorthMage",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 4,
+      "onlyOneIngredient": 0,
+      "itemType": 17,
+      "skillType": 1,
+      "toolTier": 4,
+      "armor": 12.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.20000000298023224,
+      "ingredients": [
+        {
+          "item": "SealHide",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Gold",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 15,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader7Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_CapeFeather",
+      "station": "piece_magetable",
+      "output": "CapeFeather",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 17,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 1.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Feathers",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "ScaleHide",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader5Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 2,
+      "expectedBiomeMask": 64,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_DvergrKey",
+      "station": "piece_magetable",
+      "output": "DvergrKey",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 16,
+      "skillType": 1,
+      "toolTier": 0,
+      "armor": 10.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "DvergrKeyFragment",
+          "m_amount": 9,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 0,
+      "expectedBiomeSource": "Unknown"
+    },
+    {
+      "name": "Recipe_HelmetGoldMage",
+      "station": "piece_magetable",
+      "output": "HelmetDNMage",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 1,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 6,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 22.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 10.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.4000000059604645,
+      "ingredients": [
+        {
+          "item": "MooseSinew",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldArmorMageHelmet",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyMoose",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader7Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_HelmetGoldMageUncooked",
+      "station": "piece_magetable",
+      "output": "ArmorGoldMageHelmetUncooked",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 1,
+      "skillType": 1,
+      "toolTier": 0,
+      "armor": 10.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "MooseSinew",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 15,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldArmorMageHelmet",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyMoose",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_HelmetMage",
+      "station": "piece_magetable",
+      "output": "HelmetMage",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 6,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 16.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 10.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.20000000298023224,
+      "ingredients": [
+        {
+          "item": "LinenThread",
+          "m_amount": 16,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 8,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 15,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Iron",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader5Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 40,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_HelmetMage_Ashlands",
+      "station": "piece_magetable",
+      "output": "HelmetMage_Ashlands",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 2,
+      "onlyOneIngredient": 0,
+      "itemType": 6,
+      "skillType": 1,
+      "toolTier": 5,
+      "armor": 19.0,
+      "attackAnimation": 1,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 10.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.30000001192092896,
+      "ingredients": [
+        {
+          "item": "LinenThread",
+          "m_amount": 16,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 8,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 15,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "AskHide",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader6Armor",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 34,
+      "expectedBiomeMask": 160,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_KnifeVoid",
+      "station": "piece_magetable",
+      "output": "KnifeVoid",
+      "enabled": 0,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 3,
+      "skillType": 2,
+      "toolTier": 1,
+      "armor": 20.0,
+      "attackAnimation": 0,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 12.0,
+        "m_pierce": 12.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "knife_stab",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Voidplasm",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Ectoplasm",
+          "m_amount": 8,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Gold",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader1Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 1,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffClusterbomb",
+      "station": "piece_magetable",
+      "output": "StaffClusterbomb",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 2,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 9,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 12,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 12.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 12.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_fireball",
+        "m_consumeItem": 0,
+        "m_attackEitr": 30.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "CharredBone",
+          "m_amount": 15,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Blackwood",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "ProustitePowder",
+          "m_amount": 8,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader6Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 128,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffFireball",
+      "station": "piece_magetable",
+      "output": "StaffFireball",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 9,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 12,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 120.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 120.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_fireball",
+        "m_consumeItem": 0,
+        "m_attackEitr": 35.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "YggdrasilWood",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SurtlingCore",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 16,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 8,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader5Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 64,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffFrostOrbs",
+      "station": "piece_magetable",
+      "output": "StaffFrostOrbsUncooked",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 1,
+      "skillType": 7,
+      "toolTier": 3,
+      "armor": 15.0,
+      "attackAnimation": 8,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 70.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "battleaxe_attack",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Ice",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyJotunWitch",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldStafffrostorbs",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffFrostOrbs_Upgrade",
+      "station": "piece_magetable",
+      "output": "StaffFrostOrbs",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 1,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 22,
+      "skillType": 10,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 14,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_frostorb",
+        "m_consumeItem": 0,
+        "m_attackEitr": 100.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Ice",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyJotunWitch",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader7Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_StaffGreenRoots",
+      "station": "piece_magetable",
+      "output": "StaffGreenRoots",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 2,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 9,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 12,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 20.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 20.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_fireball",
+        "m_consumeItem": 0,
+        "m_attackEitr": 55.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Blackwood",
+          "m_amount": 15,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fiddleheadfern",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "CelestialFeather",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "GemstoneGreen",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader6Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 128,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffIceShards",
+      "station": "piece_magetable",
+      "output": "StaffIceShards",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 9,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 12,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 30.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_rapidfire",
+        "m_consumeItem": 0,
+        "m_attackEitr": 5.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "YggdrasilWood",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "FreezeGland",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 16,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 8,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader5Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 80,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffLightning",
+      "station": "piece_magetable",
+      "output": "StaffLightning",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 2,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 9,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 10,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 20.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_lightningshot",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Blackwood",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "FlametalNew",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "CelestialFeather",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "GemstoneRed",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 0
+        },
+        {
+          "item": "Upgrader6Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 128,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffOrbOfAhri",
+      "station": "piece_magetable",
+      "output": "StaffOrbofAhriUncooked",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 1,
+      "skillType": 7,
+      "toolTier": 3,
+      "armor": 15.0,
+      "attackAnimation": 8,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 70.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "battleaxe_attack",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Gold",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OrbFrostFire",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldStaffOrbofAhri",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffOrbOfAhri_Upgrade",
+      "station": "piece_magetable",
+      "output": "StaffOrbofAhri",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 1,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 10,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 12,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_thrust",
+        "m_consumeItem": 0,
+        "m_attackEitr": 25.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Gold",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OrbFrostFire",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader7Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffRedTroll",
+      "station": "piece_magetable",
+      "output": "StaffRedTroll",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 2,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 10,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 12,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_trollsummon",
+        "m_consumeItem": 0,
+        "m_attackEitr": 120.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "CharredBone",
+          "m_amount": 15,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyFrostTroll",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "FlametalNew",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 3,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "GemstoneRed",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader6Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 132,
+      "expectedBiomeSource": "Estimated"
+    },
+    {
+      "name": "Recipe_StaffShield",
+      "station": "piece_magetable",
+      "output": "StaffShield",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 10,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 12,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_shield",
+        "m_consumeItem": 0,
+        "m_attackEitr": 60.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "YggdrasilWood",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 10,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "GiantBloodSack",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 16,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 8,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader5Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 64,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffSkeleton",
+      "station": "piece_magetable",
+      "output": "StaffSkeleton",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 22,
+      "skillType": 10,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 14,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_summon",
+        "m_consumeItem": 0,
+        "m_attackEitr": 100.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "BoneFragments",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Eitr",
+          "m_amount": 16,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 8,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophySkeleton",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader5Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 0,
+      "expectedBiomeSource": "Unknown"
+    },
+    {
+      "name": "Recipe_StaffSpiritCaller",
+      "station": "piece_magetable",
+      "output": "StaffSpiritCallerUncooked",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 1,
+      "skillType": 7,
+      "toolTier": 3,
+      "armor": 15.0,
+      "attackAnimation": 8,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 70.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "battleaxe_attack",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "BarkaBranch",
+          "m_amount": 8,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 4,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyMoose",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MoldStaffspiritcaller",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffSpiritCaller_Upgrade",
+      "station": "piece_magetable",
+      "output": "StaffSpiritCaller",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 1,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 22,
+      "skillType": 10,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 14,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_summon",
+        "m_consumeItem": 0,
+        "m_attackEitr": 100.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "BarkaBranch",
+          "m_amount": 8,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 4,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyMoose",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Upgrader7Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffThunderBlood",
+      "station": "piece_magetable",
+      "output": "StaffThunderbloodUncooked",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 1,
+      "skillType": 7,
+      "toolTier": 3,
+      "armor": 15.0,
+      "attackAnimation": 8,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 70.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "battleaxe_attack",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Gold",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OrbThunderBlood",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 0
+        },
+        {
+          "item": "MoldStaffthunderblood",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 0,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_StaffThunderBlood_Upgrade",
+      "station": "piece_magetable",
+      "output": "StaffThunderBlood",
+      "enabled": 1,
+      "noCraftOnlyUpgrade": 1,
+      "minLevel": 3,
+      "onlyOneIngredient": 0,
+      "itemType": 14,
+      "skillType": 9,
+      "toolTier": 5,
+      "armor": 15.0,
+      "attackAnimation": 12,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 300.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 2,
+        "m_attackAnimation": "staff_thunder",
+        "m_consumeItem": 0,
+        "m_attackEitr": 40.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Gold",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 5,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NornThread",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 2,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OrbThunderBlood",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 0
+        },
+        {
+          "item": "Upgrader7Weapon",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 0,
+          "m_upgraderResource": 1,
+          "m_recover": 0
+        }
+      ],
+      "expectedFlags": 33,
+      "expectedBiomeMask": 256,
+      "expectedBiomeSource": "Partial"
+    },
+    {
+      "name": "Recipe_TorchMist",
+      "station": "piece_magetable",
+      "output": "TorchMist",
+      "enabled": 0,
+      "noCraftOnlyUpgrade": 0,
+      "minLevel": 1,
+      "onlyOneIngredient": 0,
+      "itemType": 15,
+      "skillType": 3,
+      "toolTier": 0,
+      "armor": 15.0,
+      "attackAnimation": 5,
+      "damages": {
+        "m_damage": 0.0,
+        "m_blunt": 4.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 15.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "attack": {
+        "m_attackType": 0,
+        "m_attackAnimation": "swing_longsword",
+        "m_consumeItem": 0,
+        "m_attackEitr": 0.0
+      },
+      "eitrRegen": 0.0,
+      "ingredients": [
+        {
+          "item": "Crystal",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Resin",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "expectedFlags": 64,
+      "expectedBiomeMask": 16,
+      "expectedBiomeSource": "Estimated"
+    }
+  ]
+}

@@ -1,0 +1,308 @@
+{
+  "beforeVersion": "1.0.20",
+  "afterVersion": "1.0.21",
+  "beforeBuild": 25909357,
+  "afterBuild": 26249040,
+  "beforeAssemblySha256": "94998885B103D6E5F5480123EAEE0A093E82AF2DDEEEE37536C15BF555F24F3A",
+  "afterAssemblySha256": "9F959C0396EC4240D47FCBE5D0D062C428CC627244506DB5EA567F9D77B2B769",
+  "moves": [
+    {
+      "before": {
+        "recipe": "Recipe_OvenPancake",
+        "station": "piece_cauldron",
+        "output": "OvenPancakeUncooked",
+        "amount": 1,
+        "minLevel": 6,
+        "onlyOneIngredient": 0,
+        "qualityResultAmountMultiplier": 1.0,
+        "enabled": 1,
+        "noCraftOnlyUpgrade": 0,
+        "ingredients": [
+          {
+            "item": "MooseMeat",
+            "m_amount": 1,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "Poteitr",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "Lingonberry",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "OatFlour",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          }
+        ]
+      },
+      "after": {
+        "recipe": "Recipe_OvenPancake",
+        "station": "piece_preptable",
+        "output": "OvenPancakeUncooked",
+        "amount": 1,
+        "minLevel": 1,
+        "onlyOneIngredient": 0,
+        "qualityResultAmountMultiplier": 1.0,
+        "enabled": 1,
+        "noCraftOnlyUpgrade": 0,
+        "ingredients": [
+          {
+            "item": "MooseMeat",
+            "m_amount": 1,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "Poteitr",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "Lingonberry",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "OatFlour",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          }
+        ]
+      },
+      "oldKey": "v1/piece_cauldron/Recipe_OvenPancake/OvenPancakeUncooked",
+      "newKey": "v1/piece_preptable/Recipe_OvenPancake/OvenPancakeUncooked",
+      "oldSignature": "D82BC072F27C8D1E9F9701CD5CB579D847ECF9AD7E9D16CF740954FEAD3E3BA8",
+      "newSignature": "E4DC2C8D418687F532605E46E15172C0E991423DD75A6327014F2E0DB60EDF4C",
+      "expectedBiomeMask": 256
+    },
+    {
+      "before": {
+        "recipe": "Recipe_BakedPoteitr",
+        "station": "piece_cauldron",
+        "output": "BakedPoteitrUncooked",
+        "amount": 1,
+        "minLevel": 7,
+        "onlyOneIngredient": 0,
+        "qualityResultAmountMultiplier": 1.0,
+        "enabled": 1,
+        "noCraftOnlyUpgrade": 0,
+        "ingredients": [
+          {
+            "item": "SealBlubber",
+            "m_amount": 1,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "Kale",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "Poteitr",
+            "m_amount": 1,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "OatFlour",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          }
+        ]
+      },
+      "after": {
+        "recipe": "Recipe_BakedPoteitr",
+        "station": "piece_preptable",
+        "output": "BakedPoteitrUncooked",
+        "amount": 1,
+        "minLevel": 1,
+        "onlyOneIngredient": 0,
+        "qualityResultAmountMultiplier": 1.0,
+        "enabled": 1,
+        "noCraftOnlyUpgrade": 0,
+        "ingredients": [
+          {
+            "item": "SealBlubber",
+            "m_amount": 1,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "Kale",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "Poteitr",
+            "m_amount": 1,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          },
+          {
+            "item": "OatFlour",
+            "m_amount": 2,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          }
+        ]
+      },
+      "oldKey": "v1/piece_cauldron/Recipe_BakedPoteitr/BakedPoteitrUncooked",
+      "newKey": "v1/piece_preptable/Recipe_BakedPoteitr/BakedPoteitrUncooked",
+      "oldSignature": "8582C22B9F191C51C0D7F424A27282E6DF4F3ADE0CC4E423EE8DA84A0F2595A6",
+      "newSignature": "05340C4C736CD86ADF286BEA4F1CD92C902A2CABE70BE8C33E63F36A3C48B7BF",
+      "expectedBiomeMask": 256
+    },
+    {
+      "before": {
+        "recipe": "Recipe_KaleChips",
+        "station": "piece_cauldron",
+        "output": "KaleChipsUncooked",
+        "amount": 4,
+        "minLevel": 6,
+        "onlyOneIngredient": 0,
+        "qualityResultAmountMultiplier": 1.0,
+        "enabled": 1,
+        "noCraftOnlyUpgrade": 0,
+        "ingredients": [
+          {
+            "item": "Kale",
+            "m_amount": 12,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          }
+        ]
+      },
+      "after": {
+        "recipe": "Recipe_KaleChips",
+        "station": "piece_preptable",
+        "output": "KaleChipsUncooked",
+        "amount": 4,
+        "minLevel": 1,
+        "onlyOneIngredient": 0,
+        "qualityResultAmountMultiplier": 1.0,
+        "enabled": 1,
+        "noCraftOnlyUpgrade": 0,
+        "ingredients": [
+          {
+            "item": "Kale",
+            "m_amount": 12,
+            "m_amountPerLevel": 1,
+            "m_upgraderResource": 0,
+            "m_extraAmountOnlyOneIngredient": 0
+          }
+        ]
+      },
+      "oldKey": "v1/piece_cauldron/Recipe_KaleChips/KaleChipsUncooked",
+      "newKey": "v1/piece_preptable/Recipe_KaleChips/KaleChipsUncooked",
+      "oldSignature": "C62D9F88419691335184E4ACDBF8DBCC12D78C6273675668774E5E9892109333",
+      "newSignature": "79A551D68959B1E56B273DFE2EB682B615B74B3325D35EBA7BAE23B74BD36232",
+      "expectedBiomeMask": 256
+    }
+  ],
+  "foods": [
+    {
+      "prefab": "KaleChips",
+      "token": "$item_kalechips",
+      "itemType": 2,
+      "health": 35.0,
+      "stamina": 105.0,
+      "eitr": 0.0,
+      "duration": 1500.0
+    },
+    {
+      "prefab": "KaleChipsUncooked",
+      "token": "$item_kalechips_uncooked",
+      "itemType": 1,
+      "health": 39.0,
+      "stamina": 115.0,
+      "eitr": 0.0,
+      "duration": 1500.0
+    },
+    {
+      "prefab": "OvenPancakeUncooked",
+      "token": "$item_ovenpancake_uncooked",
+      "itemType": 1,
+      "health": 39.0,
+      "stamina": 115.0,
+      "eitr": 0.0,
+      "duration": 1500.0
+    },
+    {
+      "prefab": "BakedPoteitr",
+      "token": "$item_bakedpoteitr",
+      "itemType": 2,
+      "health": 34.0,
+      "stamina": 17.0,
+      "eitr": 100.0,
+      "duration": 1500.0
+    },
+    {
+      "prefab": "BakedPoteitrUncooked",
+      "token": "$item_bakedpoteitr_uncooked",
+      "itemType": 1,
+      "health": 37.0,
+      "stamina": 19.0,
+      "eitr": 110.0,
+      "duration": 1500.0
+    },
+    {
+      "prefab": "OvenPancake",
+      "token": "$item_ovenpancake",
+      "itemType": 2,
+      "health": 37.0,
+      "stamina": 18.0,
+      "eitr": 105.0,
+      "duration": 1800.0
+    }
+  ],
+  "ovenConversions": [
+    {
+      "station": "piece_oven",
+      "from": "BakedPoteitrUncooked",
+      "to": "BakedPoteitr"
+    },
+    {
+      "station": "piece_oven",
+      "from": "KaleChipsUncooked",
+      "to": "KaleChips"
+    },
+    {
+      "station": "piece_oven",
+      "from": "OvenPancakeUncooked",
+      "to": "OvenPancake"
+    }
+  ]
+}

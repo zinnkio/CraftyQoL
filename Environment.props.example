@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup>
+    <ValheimRoot>REPLACE_WITH_YOUR_VALHEIM_INSTALL</ValheimRoot>
+    <BepInExCore>$(ValheimRoot)\BepInEx\core</BepInExCore>
+  </PropertyGroup>
+</Project>

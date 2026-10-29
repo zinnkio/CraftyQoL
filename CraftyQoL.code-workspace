@@ -1,0 +1,45 @@
+{
+  "folders": [
+    { "name": "CraftyQoL", "path": "." }
+  ],
+  "settings": {
+    "files.exclude": {
+      ".tools": true,
+      ".references": true,
+      ".inspection": true,
+      "**/bin": true,
+      "**/obj": true
+    },
+    "search.exclude": {
+      "**/.tools/**": true,
+      "**/.references/**": true,
+      "**/.inspection/**": true,
+      "**/artifacts/**": true,
+      "**/bin/**": true,
+      "**/obj/**": true
+    }
+  },
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "CraftyQoL: Build Release",
+        "type": "process",
+        "command": "powershell.exe",
+        "args": ["-NoProfile", "-File", "${workspaceFolder}/tools/dotnet.ps1", "build", "CraftyQoL.sln", "-c", "Release", "--nologo"],
+        "options": { "cwd": "${workspaceFolder}" },
+        "group": { "kind": "build", "isDefault": true },
+        "problemMatcher": "$msCompile"
+      },
+      {
+        "label": "CraftyQoL: Pure and persistence checks",
+        "type": "process",
+        "command": "powershell.exe",
+        "args": ["-NoProfile", "-File", "${workspaceFolder}/tools/dotnet.ps1", "run", "--project", "tests/CraftyQoL.Tests", "-c", "Release"],
+        "options": { "cwd": "${workspaceFolder}" },
+        "group": "test",
+        "problemMatcher": "$msCompile"
+      }
+    ]
+  }
+}

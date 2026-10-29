@@ -1,0 +1,3349 @@
+{
+  "gameVersion": "1.0.20",
+  "assemblySha256": "94998885b103d6e5f5480123eaee0a093e82af2ddeeee37536c15bf555f24f3a",
+  "baselineCommit": "51805e3",
+  "recipes": [
+    {
+      "name": "Recipe_BakedPoteitr",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_BakedPoteitr.asset",
+      "station": "piece_cauldron",
+      "output": "BakedPoteitrUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 7,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "SealBlubber",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Kale",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Poteitr",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OatFlour",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_BakedPoteitr",
+        "output": "BakedPoteitrUncooked",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "SealBlubber"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_Blacksoup",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_Blacksoup.asset",
+      "station": "piece_cauldron",
+      "output": "BlackSoup",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 2,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Bloodbag",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Honey",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Turnip",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_Blacksoup",
+        "output": "BlackSoup",
+        "mask": 8,
+        "source": "Estimated",
+        "biomes": [
+          "Swamp"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_BloodPudding",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_BloodPudding.asset",
+      "station": "piece_cauldron",
+      "output": "BloodPudding",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 4,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Thistle",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Bloodbag",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "BarleyFlour",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_BloodPudding",
+        "output": "BloodPudding",
+        "mask": 32,
+        "source": "Estimated",
+        "biomes": [
+          "Plains"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_BoarJerky",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_BoarJerky.asset",
+      "station": "piece_cauldron",
+      "output": "BoarJerky",
+      "amount": 2,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "RawMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Honey",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_BoarJerky",
+        "output": "BoarJerky",
+        "mask": 2,
+        "source": "Estimated",
+        "biomes": [
+          "Meadows"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_Bread",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_Bread.asset",
+      "station": "piece_preptable",
+      "output": "BreadDough",
+      "amount": 2,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "BarleyFlour",
+          "m_amount": 10,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_Bread",
+        "output": "BreadDough",
+        "mask": 32,
+        "source": "Estimated",
+        "biomes": [
+          "Plains"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_CarrotSoup",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_CarrotSoup.asset",
+      "station": "piece_cauldron",
+      "output": "CarrotSoup",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Mushroom",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Carrot",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_CarrotSoup",
+        "output": "CarrotSoup",
+        "mask": 4,
+        "source": "Estimated",
+        "biomes": [
+          "BlackForest"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_CookedEgg",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_CookedEgg.asset",
+      "station": "piece_cauldron",
+      "output": "CookedEgg",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "ChickenEgg",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_CookedEgg",
+        "output": "CookedEgg",
+        "mask": 32,
+        "source": "Estimated",
+        "biomes": [
+          "Plains"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_DeerStew",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_DeerStew.asset",
+      "station": "piece_cauldron",
+      "output": "DeerStew",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "CookedDeerMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Blueberries",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Carrot",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_DeerStew",
+        "output": "DeerStew",
+        "mask": 4,
+        "source": "Estimated",
+        "biomes": [
+          "BlackForest"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_Eyescream",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_Eyescream.asset",
+      "station": "piece_cauldron",
+      "output": "Eyescream",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 3,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "GreydwarfEye",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "FreezeGland",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_Eyescream",
+        "output": "Eyescream",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "GreydwarfEye"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastAshlands",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastAshlands.asset",
+      "station": "piece_preptable",
+      "output": "FeastAshlands_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "CookedAsksvinMeat",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Vineberry",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "ScorchingMedley",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpiceAshlands",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastAshlands",
+        "output": "FeastAshlands_Material",
+        "mask": 128,
+        "source": "Curated",
+        "biomes": [
+          "Ashlands"
+        ],
+        "missingIngredients": [
+          "SpiceAshlands"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastBlackforest",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastBlackforest.asset",
+      "station": "piece_preptable",
+      "output": "FeastBlackforest_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "DeerStew",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Thistle",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "QueensJam",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpiceForests",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastBlackforest",
+        "output": "FeastBlackforest_Material",
+        "mask": 4,
+        "source": "Curated",
+        "biomes": [
+          "BlackForest"
+        ],
+        "missingIngredients": [
+          "SpiceForests"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastDeepNorth",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastDeepNorth.asset",
+      "station": "piece_preptable",
+      "output": "FeastDeepNorth_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "CookedMooseMeat",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Poteitr",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OatFlour",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpiceDeepNorth",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastDeepNorth",
+        "output": "FeastDeepNorth_Material",
+        "mask": 256,
+        "source": "Curated",
+        "biomes": [
+          "DeepNorth"
+        ],
+        "missingIngredients": [
+          "SpiceDeepNorth"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastMeadows",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastMeadows.asset",
+      "station": "piece_preptable",
+      "output": "FeastMeadows_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "CookedDeerMeat",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "CookedMeat",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Dandelion",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpiceForests",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastMeadows",
+        "output": "FeastMeadows_Material",
+        "mask": 2,
+        "source": "Curated",
+        "biomes": [
+          "Meadows"
+        ],
+        "missingIngredients": [
+          "SpiceForests"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastMistlands",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastMistlands.asset",
+      "station": "piece_preptable",
+      "output": "FeastMistlands_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "MisthareSupreme",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "CookedBugMeat",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "YggdrasilPorridge",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpiceMistlands",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastMistlands",
+        "output": "FeastMistlands_Material",
+        "mask": 64,
+        "source": "Curated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": [
+          "SpiceMistlands"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastMountains",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastMountains.asset",
+      "station": "piece_preptable",
+      "output": "FeastMountains_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "WolfMeatSkewer",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OnionSoup",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Carrot",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpiceMountains",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastMountains",
+        "output": "FeastMountains_Material",
+        "mask": 16,
+        "source": "Curated",
+        "biomes": [
+          "Mountains"
+        ],
+        "missingIngredients": [
+          "SpiceMountains"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastOceans",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastOceans.asset",
+      "station": "piece_preptable",
+      "output": "FeastOceans_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishCooked",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Thistle",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SerpentMeatCooked",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpiceOceans",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastOceans",
+        "output": "FeastOceans_Material",
+        "mask": 512,
+        "source": "Curated",
+        "biomes": [
+          "Ocean"
+        ],
+        "missingIngredients": [
+          "FishCooked",
+          "SerpentMeatCooked",
+          "SpiceOceans"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastPlains",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastPlains.asset",
+      "station": "piece_preptable",
+      "output": "FeastPlains_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Bread",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "LoxPie",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Cloudberry",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpicePlains",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastPlains",
+        "output": "FeastPlains_Material",
+        "mask": 32,
+        "source": "Curated",
+        "biomes": [
+          "Plains"
+        ],
+        "missingIngredients": [
+          "SpicePlains"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FeastSwamps",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FeastSwamps.asset",
+      "station": "piece_preptable",
+      "output": "FeastSwamps_Material",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Sausages",
+          "m_amount": 8,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Bloodbag",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TurnipStew",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SpiceForests",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FeastSwamps",
+        "output": "FeastSwamps_Material",
+        "mask": 8,
+        "source": "Curated",
+        "biomes": [
+          "Swamp"
+        ],
+        "missingIngredients": [
+          "SpiceForests"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FierySvinstew",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FierySvinstew.asset",
+      "station": "piece_cauldron",
+      "output": "FierySvinstew",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 5,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "AsksvinMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Vineberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomSmokePuff",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FierySvinstew",
+        "output": "FierySvinstew",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "MushroomSmokePuff"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_Fish1",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_Fish1.asset",
+      "station": "piece_preptable",
+      "output": "FishRaw",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": true,
+      "qualityResultAmountMultiplier": 3.0,
+      "ingredients": [
+        {
+          "item": "Fish1",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish2",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish3",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 1,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish4_cave",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish5",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish6",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 1,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish7",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 1,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish8",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 1,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish9",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 2,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish10",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 2,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish11",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 2,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fish12",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 2,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_Fish1",
+        "output": "FishRaw",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Fish1",
+          "Fish10",
+          "Fish11",
+          "Fish12",
+          "Fish2",
+          "Fish3",
+          "Fish4_cave",
+          "Fish5",
+          "Fish6",
+          "Fish7",
+          "Fish8",
+          "Fish9"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishAndBread",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishAndBread.asset",
+      "station": "piece_preptable",
+      "output": "FishAndBreadUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Fish9",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "BreadDough",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishAndBread",
+        "output": "FishAndBreadUncooked",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "BreadDough",
+          "Fish9"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishSoup",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishSoup.asset",
+      "station": "piece_cauldron",
+      "output": "FishSoup",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 7,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishRaw",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Kale",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Ice",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishSoup",
+        "output": "FishSoup",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishRaw",
+          "Ice"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishWraps",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishWraps.asset",
+      "station": "piece_cauldron",
+      "output": "FishWraps",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 4,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishCooked",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "BarleyFlour",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishWraps",
+        "output": "FishWraps",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishCooked"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishingBaitAshlands",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishingBaitAshlands.asset",
+      "station": "piece_preptable",
+      "output": "FishingBaitAshlands",
+      "amount": 20,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishingBait",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyCharredMelee",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishingBaitAshlands",
+        "output": "FishingBaitAshlands",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishingBait",
+          "TrophyCharredMelee"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishingBaitCave",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishingBaitCave.asset",
+      "station": "piece_preptable",
+      "output": "FishingBaitCave",
+      "amount": 20,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishingBait",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyFenring",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishingBaitCave",
+        "output": "FishingBaitCave",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishingBait",
+          "TrophyFenring"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishingBaitDeepNorth",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishingBaitDeepNorth.asset",
+      "station": "piece_preptable",
+      "output": "FishingBaitDeepNorth",
+      "amount": 20,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishingBait",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyHatchling",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishingBaitDeepNorth",
+        "output": "FishingBaitDeepNorth",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishingBait",
+          "TrophyHatchling"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishingBaitForest",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishingBaitForest.asset",
+      "station": "piece_preptable",
+      "output": "FishingBaitForest",
+      "amount": 20,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishingBait",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyFrostTroll",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishingBaitForest",
+        "output": "FishingBaitForest",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishingBait",
+          "TrophyFrostTroll"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishingBaitMistlands",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishingBaitMistlands.asset",
+      "station": "piece_preptable",
+      "output": "FishingBaitMistlands",
+      "amount": 20,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishingBait",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyLox",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishingBaitMistlands",
+        "output": "FishingBaitMistlands",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishingBait",
+          "TrophyLox"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishingBaitOcean",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishingBaitOcean.asset",
+      "station": "piece_preptable",
+      "output": "FishingBaitOcean",
+      "amount": 20,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishingBait",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophySerpent",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishingBaitOcean",
+        "output": "FishingBaitOcean",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishingBait",
+          "TrophySerpent"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishingBaitPlains",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishingBaitPlains.asset",
+      "station": "piece_preptable",
+      "output": "FishingBaitPlains",
+      "amount": 20,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishingBait",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyGoblin",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishingBaitPlains",
+        "output": "FishingBaitPlains",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishingBait",
+          "TrophyGoblin"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_FishingBaitSwamp",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_FishingBaitSwamp.asset",
+      "station": "piece_preptable",
+      "output": "FishingBaitSwamp",
+      "amount": 20,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishingBait",
+          "m_amount": 20,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "TrophyAbomination",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_FishingBaitSwamp",
+        "output": "FishingBaitSwamp",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishingBait",
+          "TrophyAbomination"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_HoneyGlazedChicken",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_HoneyGlazedChicken.asset",
+      "station": "piece_preptable",
+      "output": "HoneyGlazedChickenUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "ChickenMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Honey",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomJotunPuffs",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_HoneyGlazedChicken",
+        "output": "HoneyGlazedChickenUncooked",
+        "mask": 64,
+        "source": "Estimated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_KaleChips",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_KaleChips.asset",
+      "station": "piece_cauldron",
+      "output": "KaleChipsUncooked",
+      "amount": 4,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Kale",
+          "m_amount": 12,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_KaleChips",
+        "output": "KaleChipsUncooked",
+        "mask": 256,
+        "source": "Estimated",
+        "biomes": [
+          "DeepNorth"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_LingonDricka",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_LingonDricka.asset",
+      "station": "piece_cauldron",
+      "output": "Lingondricka",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Lingonberry",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Ice",
+          "m_amount": 5,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_LingonDricka",
+        "output": "Lingondricka",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Ice"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_LoxPie",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_LoxPie.asset",
+      "station": "piece_preptable",
+      "output": "LoxPieUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Cloudberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "LoxMeat",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "BarleyFlour",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_LoxPie",
+        "output": "LoxPieUncooked",
+        "mask": 32,
+        "source": "Estimated",
+        "biomes": [
+          "Plains"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_MagicallyStuffedShroom",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MagicallyStuffedShroom.asset",
+      "station": "piece_preptable",
+      "output": "MagicallyStuffedShroomUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "MushroomMagecap",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "GiantBloodSack",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Turnip",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MagicallyStuffedShroom",
+        "output": "MagicallyStuffedShroomUncooked",
+        "mask": 64,
+        "source": "Estimated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_MarinatedGreens",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MarinatedGreens.asset",
+      "station": "piece_cauldron",
+      "output": "MarinatedGreens",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Sap",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomMagecap",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fiddleheadfern",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomSmokePuff",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MarinatedGreens",
+        "output": "MarinatedGreens",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Fiddleheadfern",
+          "MushroomSmokePuff"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_MashedMeat",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MashedMeat.asset",
+      "station": "piece_cauldron",
+      "output": "MashedMeat",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "AsksvinMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "VoltureMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fiddleheadfern",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MashedMeat",
+        "output": "MashedMeat",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Fiddleheadfern"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_MeatPlatter",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MeatPlatter.asset",
+      "station": "piece_preptable",
+      "output": "MeatPlatterUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "BugMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "LoxMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "HareMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MeatPlatter",
+        "output": "MeatPlatterUncooked",
+        "mask": 64,
+        "source": "Estimated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_MeatballsMashedPoteitr",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MeatballsMashedPoteitr.asset",
+      "station": "piece_cauldron",
+      "output": "MeatballsMashedPoteitr",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 7,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "MooseMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Lingonberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Poteitr",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MeatballsMashedPoteitr",
+        "output": "MeatballsMashedPoteitr",
+        "mask": 256,
+        "source": "Estimated",
+        "biomes": [
+          "DeepNorth"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_MinceMeatSauce",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MinceMeatSauce.asset",
+      "station": "piece_cauldron",
+      "output": "MinceMeatSauce",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "RawMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "NeckTail",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Carrot",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MinceMeatSauce",
+        "output": "MinceMeatSauce",
+        "mask": 4,
+        "source": "Estimated",
+        "biomes": [
+          "BlackForest"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_MisthareSupreme",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MisthareSupreme.asset",
+      "station": "piece_preptable",
+      "output": "MisthareSupremeUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "HareMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomJotunPuffs",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Carrot",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MisthareSupreme",
+        "output": "MisthareSupremeUncooked",
+        "mask": 64,
+        "source": "Estimated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_MooseKebab",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MooseKebab.asset",
+      "station": "piece_cauldron",
+      "output": "MooseKebab",
+      "amount": 2,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 7,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "MooseMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Kale",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OatFlour",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Lingonberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MooseKebab",
+        "output": "MooseKebab",
+        "mask": 256,
+        "source": "Estimated",
+        "biomes": [
+          "DeepNorth"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_MushroomOmelette",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_MushroomOmelette.asset",
+      "station": "piece_cauldron",
+      "output": "MushroomOmelette",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 5,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "ChickenEgg",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomJotunPuffs",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_MushroomOmelette",
+        "output": "MushroomOmelette",
+        "mask": 64,
+        "source": "Estimated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_OatmealLingonberryJam",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_OatmealLingonberryJam.asset",
+      "station": "piece_cauldron",
+      "output": "OatmealLingonberryJam",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Oat",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Lingonberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OatMilk",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_OatmealLingonberryJam",
+        "output": "OatmealLingonberryJam",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Oat",
+          "OatMilk"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_Onionsoup",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_Onionsoup.asset",
+      "station": "piece_cauldron",
+      "output": "OnionSoup",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 2,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Onion",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_Onionsoup",
+        "output": "OnionSoup",
+        "mask": 16,
+        "source": "Estimated",
+        "biomes": [
+          "Mountains"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_OvenPancake",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_OvenPancake.asset",
+      "station": "piece_cauldron",
+      "output": "OvenPancakeUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "MooseMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Poteitr",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Lingonberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OatFlour",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_OvenPancake",
+        "output": "OvenPancakeUncooked",
+        "mask": 256,
+        "source": "Estimated",
+        "biomes": [
+          "DeepNorth"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_Pancakes",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_Pancakes.asset",
+      "station": "piece_cauldron",
+      "output": "Pancakes",
+      "amount": 3,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "OatMilk",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "OatFlour",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "ChickenEgg",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Blueberries",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_Pancakes",
+        "output": "Pancakes",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "OatMilk"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_PiquantPie",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_PiquantPie.asset",
+      "station": "piece_preptable",
+      "output": "PiquantPieUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Vineberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "AsksvinMeat",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "BarleyFlour",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_PiquantPie",
+        "output": "PiquantPieUncooked",
+        "mask": 128,
+        "source": "Estimated",
+        "biomes": [
+          "Ashlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_PulledBear",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_PulledBear.asset",
+      "station": "piece_cauldron",
+      "output": "PulledBear",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "CookedBjornMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Carrot",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Blueberries",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_PulledBear",
+        "output": "PulledBear",
+        "mask": 256,
+        "source": "Estimated",
+        "biomes": [
+          "DeepNorth"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_QueensJam",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_QueensJam.asset",
+      "station": "piece_cauldron",
+      "output": "QueensJam",
+      "amount": 4,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Raspberry",
+          "m_amount": 8,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Blueberries",
+          "m_amount": 6,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_QueensJam",
+        "output": "QueensJam",
+        "mask": 4,
+        "source": "Estimated",
+        "biomes": [
+          "BlackForest"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_RoastedCrustPie",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_RoastedCrustPie.asset",
+      "station": "piece_preptable",
+      "output": "RoastedCrustPieUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Vineberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "VoltureEgg",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "BarleyFlour",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_RoastedCrustPie",
+        "output": "RoastedCrustPieUncooked",
+        "mask": 128,
+        "source": "Estimated",
+        "biomes": [
+          "Ashlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_Salad",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_Salad.asset",
+      "station": "piece_cauldron",
+      "output": "Salad",
+      "amount": 3,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 5,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "MushroomJotunPuffs",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Onion",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Cloudberry",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_Salad",
+        "output": "Salad",
+        "mask": 64,
+        "source": "Estimated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_Sausages",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_Sausages.asset",
+      "station": "piece_cauldron",
+      "output": "Sausages",
+      "amount": 4,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 2,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Entrails",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "RawMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Thistle",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_Sausages",
+        "output": "Sausages",
+        "mask": 8,
+        "source": "Estimated",
+        "biomes": [
+          "Swamp"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_ScorchingMedley",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_ScorchingMedley.asset",
+      "station": "piece_cauldron",
+      "output": "ScorchingMedley",
+      "amount": 3,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "MushroomJotunPuffs",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Onion",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fiddleheadfern",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_ScorchingMedley",
+        "output": "ScorchingMedley",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Fiddleheadfern"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_SealSoup",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_SealSoup.asset",
+      "station": "piece_cauldron",
+      "output": "SealSoup",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 7,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "SealBlubber",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Kale",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Ice",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_SealSoup",
+        "output": "SealSoup",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Ice",
+          "SealBlubber"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_SeekerAspic",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_SeekerAspic.asset",
+      "station": "piece_cauldron",
+      "output": "SeekerAspic",
+      "amount": 2,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 5,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "BugMeat",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomMagecap",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "RoyalJelly",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_SeekerAspic",
+        "output": "SeekerAspic",
+        "mask": 64,
+        "source": "Estimated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_SerpentStew",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_SerpentStew.asset",
+      "station": "piece_cauldron",
+      "output": "SerpentStew",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 2,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Mushroom",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "SerpentMeatCooked",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Honey",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_SerpentStew",
+        "output": "SerpentStew",
+        "mask": 512,
+        "source": "Curated",
+        "biomes": [
+          "Ocean"
+        ],
+        "missingIngredients": [
+          "SerpentMeatCooked"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_ShocklateSmoothie",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_ShocklateSmoothie.asset",
+      "station": "piece_cauldron",
+      "output": "ShocklateSmoothie",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 2,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Ooze",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Raspberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Blueberries",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_ShocklateSmoothie",
+        "output": "ShocklateSmoothie",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Ooze"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_SizzlingBerryBroth",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_SizzlingBerryBroth.asset",
+      "station": "piece_cauldron",
+      "output": "SizzlingBerryBroth",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 5,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Sap",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fiddleheadfern",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Vineberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_SizzlingBerryBroth",
+        "output": "SizzlingBerryBroth",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Fiddleheadfern"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_SmokedFish",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_SmokedFish.asset",
+      "station": "piece_cauldron",
+      "output": "SmokedFish",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 7,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "FishRaw",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Kale",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Poteitr",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_SmokedFish",
+        "output": "SmokedFish",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "FishRaw"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_SmokedMooseMeat",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_SmokedMooseMeat.asset",
+      "station": "piece_cauldron",
+      "output": "SmokedMooseMeat",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 7,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "MooseMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Kale",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_SmokedMooseMeat",
+        "output": "SmokedMooseMeat",
+        "mask": 256,
+        "source": "Estimated",
+        "biomes": [
+          "DeepNorth"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_SparklingShroomshake",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_SparklingShroomshake.asset",
+      "station": "piece_cauldron",
+      "output": "SparklingShroomshake",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 6,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Sap",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Vineberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomSmokePuff",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "MushroomMagecap",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_SparklingShroomshake",
+        "output": "SparklingShroomshake",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "MushroomSmokePuff"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_SpiceInducedMarmalade",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_SpiceInducedMarmalade.asset",
+      "station": "piece_cauldron",
+      "output": "SpicyMarmalade",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 5,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Vineberry",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Honey",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Fiddleheadfern",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_SpiceInducedMarmalade",
+        "output": "SpicyMarmalade",
+        "mask": 0,
+        "source": "Unknown",
+        "biomes": [],
+        "missingIngredients": [
+          "Fiddleheadfern"
+        ]
+      }
+    },
+    {
+      "name": "Recipe_TurnipStew",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_TurnipStew.asset",
+      "station": "piece_cauldron",
+      "output": "TurnipStew",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 2,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "RawMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Turnip",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_TurnipStew",
+        "output": "TurnipStew",
+        "mask": 8,
+        "source": "Estimated",
+        "biomes": [
+          "Swamp"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_VikingCupcake",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_VikingCupcake.asset",
+      "station": "piece_preptable",
+      "output": "VikingCupcakeUncooked",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 1,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Cloudberry",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "ChickenEgg",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "BarleyFlour",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Honey",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_VikingCupcake",
+        "output": "VikingCupcakeUncooked",
+        "mask": 32,
+        "source": "Estimated",
+        "biomes": [
+          "Plains"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_WolfJerky",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_WolfJerky.asset",
+      "station": "piece_cauldron",
+      "output": "WolfJerky",
+      "amount": 2,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 3,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "WolfMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Honey",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_WolfJerky",
+        "output": "WolfJerky",
+        "mask": 16,
+        "source": "Estimated",
+        "biomes": [
+          "Mountains"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_WolfSkewer",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_WolfSkewer.asset",
+      "station": "piece_cauldron",
+      "output": "WolfMeatSkewer",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 3,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "WolfMeat",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Mushroom",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Onion",
+          "m_amount": 1,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_WolfSkewer",
+        "output": "WolfMeatSkewer",
+        "mask": 16,
+        "source": "Estimated",
+        "biomes": [
+          "Mountains"
+        ],
+        "missingIngredients": []
+      }
+    },
+    {
+      "name": "Recipe_YggdrasilPorridge",
+      "assetPath": "Assets/GameElements/Recipes/Consumables/Recipe_YggdrasilPorridge.asset",
+      "station": "piece_cauldron",
+      "output": "YggdrasilPorridge",
+      "amount": 1,
+      "enabled": true,
+      "noCraftOnlyUpgrade": false,
+      "minLevel": 5,
+      "onlyOneIngredient": false,
+      "qualityResultAmountMultiplier": 1.0,
+      "ingredients": [
+        {
+          "item": "Sap",
+          "m_amount": 4,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "Barley",
+          "m_amount": 3,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        },
+        {
+          "item": "RoyalJelly",
+          "m_amount": 2,
+          "m_extraAmountOnlyOneIngredient": 0,
+          "m_amountPerLevel": 1,
+          "m_upgraderResource": 0,
+          "m_recover": 1
+        }
+      ],
+      "before": {
+        "name": "Recipe_YggdrasilPorridge",
+        "output": "YggdrasilPorridge",
+        "mask": 64,
+        "source": "Estimated",
+        "biomes": [
+          "Mistlands"
+        ],
+        "missingIngredients": []
+      }
+    }
+  ]
+}

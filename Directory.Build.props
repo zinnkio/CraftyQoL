@@ -1,0 +1,15 @@
+<Project>
+  <PropertyGroup>
+    <ProjectRoot>$(MSBuildThisFileDirectory)</ProjectRoot>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Deterministic>true</Deterministic>
+    <DebugType>portable</DebugType>
+    <BepInExCore Condition="'$(BepInExCore)' == ''">$(ProjectRoot).references\BepInExPack_Valheim-5.4.2351\BepInExPack_Valheim\BepInEx\core</BepInExCore>
+  </PropertyGroup>
+  <Import Project="$(ProjectRoot)Environment.props" Condition="Exists('$(ProjectRoot)Environment.props')" />
+  <PropertyGroup>
+    <GameManaged>$(ValheimRoot)\valheim_Data\Managed</GameManaged>
+  </PropertyGroup>
+</Project>

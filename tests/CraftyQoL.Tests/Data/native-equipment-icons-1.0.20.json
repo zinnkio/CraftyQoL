@@ -1,0 +1,161 @@
+{
+  "ArmorBronzeChest": [
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": 373505622124238513
+      },
+      "spriteName": "ArmorBronzeChest",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    }
+  ],
+  "Resin": [
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": 3035532292404685279
+      },
+      "spriteName": "resin",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    }
+  ],
+  "ShieldWood": [
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": 403052651397721237
+      },
+      "spriteName": "shield_wood0",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    },
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": -8781636953225656255
+      },
+      "spriteName": "shield_wood1",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    },
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": 7492182128698207931
+      },
+      "spriteName": "shield_wood2",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    },
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": 7650568022913870093
+      },
+      "spriteName": "shield_wood3",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    }
+  ],
+  "Hammer": [
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": -2740423503160172817
+      },
+      "spriteName": "hammer",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    }
+  ],
+  "Coins": [
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": -6989798238320730921
+      },
+      "spriteName": "coins",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    }
+  ],
+  "ArrowWood": [
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": 1113219197204741355
+      },
+      "spriteName": "arrow_wood",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    }
+  ],
+  "StaffFireball": [
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": -2972051638425680635
+      },
+      "spriteName": "StaffFireball",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    }
+  ],
+  "SwordBronze": [
+    {
+      "pointer": {
+        "m_FileID": 6,
+        "m_PathID": -3445677618423323539
+      },
+      "spriteName": "SwordBronze",
+      "rect": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 64.0,
+        "height": 64.0
+      }
+    }
+  ]
+}

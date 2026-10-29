@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <IsValheimPlugin>true</IsValheimPlugin>
+    <AssemblyName>CraftyQoL</AssemblyName>
+    <RootNamespace>CraftyQoL</RootNamespace>
+    <Version>0.18.0</Version>
+    <Description>Client-side native food and equipment Craft recipe navigation for Valheim.</Description>
+  </PropertyGroup>
+</Project>

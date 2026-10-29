@@ -1,0 +1,25 @@
+# Local tools, SDKs, third-party references, proprietary data and test profiles
+.tools/
+.references/
+.inspection/
+.test-profile/
+artifacts/
+packages/
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.dll
+*.exe
+*.pdb
+*.mdb
+*.zip
+*.log
+Environment.props
+__pycache__/
+
+# Private rollback, sanitised publishing workspace and report-only optimisation audit
+.backups/
+.publication/
+OPTIMISATION_AUDIT.md
