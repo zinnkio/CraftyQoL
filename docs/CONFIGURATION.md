@@ -8,7 +8,7 @@ BepInEx file: `BepInEx/config/io.github.zinnkio.craftyqol.cfg`.
 | --- | --- | --- |
 | General / Enabled | true | Craft navigation, tracker and storage Sort & Stack |
 | Diagnostics / LogRefreshes | false | Recipe-list refresh counts/timings for manual investigation |
-| Diagnostics / ProfileInventoryOpenings | false | Temporary startup-only timing/allocation capture; see below |
+| Diagnostics / ProfileInventoryOpenings | false | Temporary startup-only timing/allocation capture; [profiling procedure](CREATIVE_INVENTORY_PROFILING.md) |
 
 No automatic storage sorting, chest-counting, network option or F8 edit binding exists.
 
@@ -39,9 +39,3 @@ Read at startup, never rewritten: `BepInEx/config/io.github.zinnkio.craftyqol/bi
 Names: Meadows, BlackForest, Swamp, Mountains, Plains, Mistlands, Ashlands, DeepNorth, Ocean, Unknown. Unknown alone/empty has no reliable membership and displays Misc; All is a query choice, not an association. Overrides replace association only; never discovery/unlocks/station scope/requirements. Invalid documents are ignored as a whole with warning and preserved.
 
 Storage layout persists through native inventory change/save/replication, not plugin preference files. All custom-data stacks remain separate.
-
-## Optional opening profiling
-
-Close the game, set `Diagnostics.ProfileInventoryOpenings = true`, then restart. Confirm filters and row stars are active. With the same character/world, access flags, recipe list, search/filter state and tracker pins, perform ten inventory openings (two seconds open, two closed), then exit normally. Captures appear in the plugin config directory under `diagnostics/inventory-openings-*.jsonl`. Disable profiling and restart after capture; do not leave it on for normal play.
-
-Compare only records with `comparisonValid = true` and matching recipe/access counts. Treat the first opening separately from repeats. Feature-disabled controls retain loader/diagnostic overhead; they are not pure vanilla. Timings are inclusive, capture-window frame intervals cover other game work, and unsupported allocation counters are null. The static startup suffix about no optimisation predates row reuse; use the exact DLL/source and capture counters to identify a build. Timing alone does not validate interactions or locate later filter-change hitches. Review logs for personal information before sharing.

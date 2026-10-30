@@ -9,7 +9,8 @@ try {
         'Directory.Build.props','Directory.Build.targets','Environment.props.example',
         'global.json','LICENSE','README.md','THIRD_PARTY_NOTICES.md')
     $docs = @('ARCHITECTURE.md','BUILDING.md','COMPATIBILITY.md','CONFIGURATION.md',
-        'DEVELOPMENT_HISTORY.md','INSTALLATION.md','MANUAL_TESTS.md','RELEASE_INSTALL.md')
+        'DEVELOPMENT_HISTORY.md','INSTALLATION.md','MANUAL_TESTS.md','RELEASE_INSTALL.md',
+        'BIOME_PROVENANCE.md','CREATIVE_INVENTORY_PROFILING.md')
     $scripts = @('dotnet.ps1','package.ps1','check-publication.ps1')
     $allowed = '^src/CraftyQoL/(?:Core/)?[A-Za-z0-9.]+\.(?:cs|csproj)$|^tests/CraftyQoL.Tests/[A-Za-z0-9.]+\.(?:cs|csproj)$|^tests/CraftyQoL.Tests/Data/[A-Za-z0-9_.-]+\.(?:json|md)$'
     foreach ($file in $files) {
@@ -22,6 +23,9 @@ try {
         # Known accidental credential/private-path shapes; manual review is still required.
         $sensitive = '(?i)(?:[A-Z]:[\\/](?:Users|Documents|SteamLibrary)[\\/]|/[U]sers/|/[h]ome/)[^\s]+|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'
         if ($content -match $sensitive) { throw "Potential private content in $file (value withheld)." }
+        foreach ($reference in [regex]::Matches($(if ($file -eq '.gitignore') { '' } else { $content }), '(?:docs|tools)/[A-Za-z0-9_./-]+\.(?:md|ps1)')) {
+            if (!(Test-Path -LiteralPath (Join-Path $root $reference.Value))) { throw "Broken source/documentation reference in ${file}: $($reference.Value)" }
+        }
         if ($file.EndsWith('.md')) {
             foreach ($link in [regex]::Matches($content, '\]\(([^)]+)\)')) {
                 $target = $link.Groups[1].Value.Split('#')[0]
