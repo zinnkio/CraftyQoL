@@ -1,10 +1,10 @@
 # Changelog
 
-## Unreleased
+## 0.18.4 - 30 October 2026
 
 - Use native action-button frames, gold text and hover/pressed/disabled sprites across filter, tracker, Sort, pin and row-favourite controls. Compact borders scale to the existing layout; H/S/E colours and biome swatches remain.
 - Add four user-provided in-game screenshots to the 0.18.3 release showcase.
-- Presentation only: no recipe, sorting, persistence, input or storage-authority changes. In-game visual/scaling checks remain pending.
+- Presentation only: no recipe, sorting, persistence, input or storage-authority changes. The maintainer approved the button appearance; broader controller/UI-scale checks remain incomplete.
 
 ## 0.18.3 - 30 October 2026
 

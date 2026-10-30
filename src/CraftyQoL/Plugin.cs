@@ -14,7 +14,7 @@ namespace CraftyQoL
     {
         public const string Id = "io.github.zinnkio.craftyqol";
         public const string Name = "CraftyQoL";
-        public const string Version = "0.18.3";
+        public const string Version = "0.18.4";
         internal static Plugin? Instance { get; private set; }
         internal ConfigEntry<bool> Enabled = null!;
         internal ConfigEntry<bool> LogRefreshes = null!;

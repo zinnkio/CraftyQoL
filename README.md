@@ -8,7 +8,7 @@ Craft faster. Find recipes, track materials and organise storage without leaving
 
 **Valheim 1.0.21** · **BepInExPack 5.4.2351** · **Client-side**
 
-See the [changelog](CHANGELOG.md) for released and upcoming changes. [In-game screenshots](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.3#screenshots) showcase the published build.
+See the [changelog](CHANGELOG.md) for released and upcoming changes. [In-game screenshots](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.3#screenshots) showcase the features in v0.18.3; v0.18.4 adds native button styling.
 
 ## Features
 
@@ -27,7 +27,7 @@ Storage support includes standard chests, barrel, grausten chest, wardrobe, park
 ## Install
 
 1. Install [BepInExPack for Valheim](https://thunderstore.io/c/valheim/p/denikson/BepInExPack_Valheim/) and close the game.
-2. Download **CraftyQoL-0.18.3.zip** from the [release page](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.3).
+2. Download **CraftyQoL-0.18.4.zip** from the [release page](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.4).
 3. Open the ZIP and copy its **BepInEx** folder into your Valheim installation, merging with the existing folder. The DLL belongs at `BepInEx/plugins/CraftyQoL/CraftyQoL.dll`.
 4. Launch Valheim. No server installation is needed.
 

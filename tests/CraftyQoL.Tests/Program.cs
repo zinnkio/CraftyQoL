@@ -233,11 +233,11 @@ internal static class Program
         using (AssemblyDefinition assembly = AssemblyDefinition.ReadAssembly(path))
         {
             var module=assembly.MainModule;
-            Assert(assembly.Name.Name=="CraftyQoL" && assembly.Name.Version==new Version(0,18,3,0),"Rebranded assembly identity mismatch");
+            Assert(assembly.Name.Name=="CraftyQoL" && assembly.Name.Version==new Version(0,18,4,0),"Rebranded assembly identity mismatch");
             var identity=module.GetType("CraftyQoL.Plugin");
             Assert((string)identity.Fields.Single(f=>f.Name=="Id").Constant=="io.github.zinnkio.craftyqol" && (string)identity.Fields.Single(f=>f.Name=="Name").Constant=="CraftyQoL","Rebranded plugin/config identity mismatch");
             var declared=identity.CustomAttributes.Single(a=>a.AttributeType.FullName=="BepInEx.BepInPlugin").ConstructorArguments;
-            Assert((string)declared[0].Value=="io.github.zinnkio.craftyqol" && (string)declared[1].Value=="CraftyQoL" && (string)declared[2].Value=="0.18.3","BepInEx identity metadata mismatch");
+            Assert((string)declared[0].Value=="io.github.zinnkio.craftyqol" && (string)declared[1].Value=="CraftyQoL" && (string)declared[2].Value=="0.18.4","BepInEx identity metadata mismatch");
             Assert(module.Types.All(t=>t.Namespace=="" || t.Namespace=="System.Runtime.CompilerServices" || t.Namespace=="Microsoft.CodeAnalysis" || t.Namespace=="CraftyQoL" || t.Namespace.StartsWith("CraftyQoL.",StringComparison.Ordinal)),"Unexpected runtime namespace");
             var allowed = new HashSet<string>(new[] { "InventoryGui.UpdateCraftingPanel", "InventoryGui.UpdateRecipeList", "InventoryGui.Update", "InventoryGui.Hide", "InventoryGui.OnDestroy",
                 "ZInput.GetButtonDown", "ZInput.GetKeyDown", "UIGamePad.ButtonPressed", "PlayerController.TakeInput" }, StringComparer.Ordinal);
