@@ -2,6 +2,12 @@
 
 Offline checks do not prove UI/gameplay/multiplayer safety. Use disposable test items/worlds for destructive-failure simulations. The 0.18.3 build needs native-height Craft pin/Sort alignment, square native row styling and reused favourite/tooltip controls checked across scales and stations. Creative inventory functionality with actual no-placement-cost received maintainer confirmation; timing tests alone cover no additional interactions.
 
+## Next native-button source update
+
+- [ ] Match Sort and Craft pin frames to adjacent native controls; verify hover/press/disabled/controller-focus feedback.
+- [ ] Check compact filter, biome, favourite and tracker buttons at several UI scales: bevels, gold neutral labels, H/S/E colours, swatches, selected outlines and unclipped text/icons. Confirm favourite input after row reuse.
+- [ ] Search, recipe-row backgrounds, button geometry/navigation, inventory/Upgrade isolation and storage safety remain unchanged. No new runtime validation is implied by the release screenshots, which show 0.18.3 before this styling update.
+
 ## Crafting/tracker
 
 - [ ] Seven stations plus inventory Craft: categories/overlaps, independent sorts, search/clear/IME, favourites/pins. Actual crafting quantities/requirements/outputs remain vanilla. Upgrade/Repair/unrelated interfaces retain ordering/selection/layout.

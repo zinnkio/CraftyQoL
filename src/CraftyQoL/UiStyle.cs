@@ -8,14 +8,14 @@ namespace CraftyQoL
 {
     internal static class UiStyle
     {
-        internal const float TextSize = 11, MinimumTextSize = 10, SearchSize = 12, PlaceholderSize = 11, CaptionSize = 9, StarSize = 16;
+        internal const float MinimumTextSize = 10, SearchSize = 12, PlaceholderSize = 11, CaptionSize = 9, StarSize = 16;
         internal const float TextPaddingX = 2, TextPaddingY = 1, SearchPaddingX = 5, SearchPaddingY = 2;
-        internal static readonly Color Surface = new Color(0.62f, 0.57f, 0.49f);
         internal static readonly Color InputSurface = new Color(0.74f, 0.68f, 0.57f);
         internal static readonly Color Accent = new Color(0.84f, 0.69f, 0.44f);
         internal static readonly Color DisabledSurface = new Color(0.34f, 0.32f, 0.29f);
         internal static readonly Color GoldStar = new Color(1, 0.8f, 0.3f);
         internal static readonly Color OutlineStar = new Color(0.82f, 0.8f, 0.73f);
+        private static Color _buttonTextColour = GoldStar;
         private static GameObject? _tooltipPrefab;
         internal static UITooltip Tooltip(InventoryGui gui, GameObject target)
         {
@@ -58,6 +58,37 @@ namespace CraftyQoL
             colours.disabledColor = DisabledSurface; colours.fadeDuration = 0.08f;
             return colours;
         }
+        // Copy visual properties only: never clone an action button's events or shortcuts.
+        // Stack All, Take All and Craft share these native action sprites in the qualified client.
+        internal static void ButtonSkin(Button native, Button button, float height)
+        {
+            if (!native) throw new NotSupportedException("Native action-button template unavailable.");
+            Image source = native.GetComponent<Image>();
+            Image image = button.GetComponent<Image>();
+            if (!source || !source.sprite || !image || height <= 0 || float.IsNaN(height) || float.IsInfinity(height))
+                throw new NotSupportedException("Native action-button skin unavailable.");
+            image.sprite = source.sprite; image.overrideSprite = null;
+            image.color = source.color; image.material = source.material; image.maskable = source.maskable;
+            image.type = source.type; image.preserveAspect = source.preserveAspect;
+            // Keep full native bevels on full-height actions; scale them for compact controls.
+            image.pixelsPerUnitMultiplier = source.pixelsPerUnitMultiplier *
+                Mathf.Max(1, ((RectTransform)native.transform).rect.height / height);
+            button.targetGraphic = image; button.spriteState = native.spriteState;
+            button.colors = native.colors; button.transition = native.transition;
+        }
+        internal static void ButtonText(InventoryGui gui, TMP_Text text, float height)
+        {
+            TMP_Text native = gui.m_stackAllButton.GetComponentInChildren<TMP_Text>(true);
+            if (!native || !native.font) throw new NotSupportedException("Native action-button text unavailable.");
+            _buttonTextColour = native.color;
+            text.font = native.font; text.fontSharedMaterial = native.fontSharedMaterial;
+            text.color = _buttonTextColour; text.fontStyle = native.fontStyle;
+            text.enableAutoSizing = true;
+            text.fontSizeMax = Mathf.Min(native.fontSizeMax, height * 0.5f);
+            text.fontSizeMin = Mathf.Min(MinimumTextSize, text.fontSizeMax);
+            text.fontSize = text.fontSizeMax;
+            text.textWrappingMode = TextWrappingModes.NoWrap;
+        }
         internal static void NativeBorder(Image image)
         {
             if (!image || !image.sprite) return;
@@ -79,11 +110,10 @@ namespace CraftyQoL
         internal static void Selected(Button button, bool selected, Color colour, Color? surface = null)
         {
             button.transform.Find("CraftyQoL.Selected").gameObject.SetActive(selected && button.interactable);
-            Color background = surface ?? Surface;
-            button.colors = Colours(selected ? Color.Lerp(background, Accent, 0.28f) : background);
+            // Preserve the native sprite-swap states. Only biome swatches tint the image.
+            button.targetGraphic.color = surface ?? Color.white;
             TMP_Text text = button.GetComponentInChildren<TMP_Text>(true);
-            text.color = button.interactable ? colour : new Color(0.6f, 0.58f, 0.53f);
-            text.fontStyle = selected ? FontStyles.Bold : FontStyles.Normal;
+            text.color = button.interactable ? (colour == Color.white ? _buttonTextColour : colour) : new Color(0.6f, 0.58f, 0.53f);
         }
         internal static void AddSelectionMarker(Button button)
         {

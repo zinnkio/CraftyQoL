@@ -34,6 +34,7 @@ namespace CraftyQoL
             try
             {
                 Button = NativeToolbar.MakeButton(gui, root, "", "Pin recipe to tracker (independent of favourites)", Toggle, 0,0,TrackerPinGeometry.Size,_craft.rect.height);
+                UiStyle.ButtonSkin(gui.m_craftButton,Button,_craft.rect.height);
                 foreach(EventTrigger trigger in Button.GetComponentsInChildren<EventTrigger>(true))
                 { trigger.enabled=false;UnityEngine.Object.Destroy(trigger); }
                 var buttonRect=(RectTransform)Button.transform;

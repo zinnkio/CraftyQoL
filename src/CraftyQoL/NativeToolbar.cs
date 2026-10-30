@@ -509,18 +509,15 @@ namespace CraftyQoL
             TMP_Text text = button.GetComponentInChildren<TMP_Text>(true);
             text.text = label;
             text.alignment = TextAlignmentOptions.Center; text.margin = Vector4.zero;
-            text.enableAutoSizing = true;
-            text.fontSizeMin = UiStyle.MinimumTextSize;
-            text.fontSizeMax = UiStyle.TextSize;
+            UiStyle.ButtonText(gui, text, height);
             var textRect = text.rectTransform;
             textRect.anchorMin = Vector2.zero; textRect.anchorMax = Vector2.one;
             textRect.offsetMin = new Vector2(UiStyle.TextPaddingX, UiStyle.TextPaddingY); textRect.offsetMax = new Vector2(-UiStyle.TextPaddingX, -UiStyle.TextPaddingY);
             UITooltip tip = UiStyle.Tooltip(gui, button.gameObject);
             tip.m_topic = ""; tip.m_text = tooltip; tip.m_gamepadFocusObject = null;
             Place((RectTransform)button.transform, x, y, width, height);
-            button.transition = Selectable.Transition.ColorTint;
-            UiStyle.NativeBorder(button.GetComponent<Image>());UiStyle.Round(button.GetComponent<Image>());
-            button.colors = UiStyle.Colours(UiStyle.Surface);
+            UiStyle.ButtonSkin(gui.m_stackAllButton, button, height);
+            UiStyle.Round(button.GetComponent<Image>());
             UiStyle.AddSelectionMarker(button);
             return button;
         }

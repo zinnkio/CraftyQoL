@@ -45,6 +45,17 @@ internal static class RowWidgetTests
         Program.Assert(Calls(Method("RowWidgetPool",".ctor"),"UiStyle","Round"),"Favourite buttons stay rounded");
         var makeButton=m.GetType("CraftyQoL.NativeToolbar").Methods.Single(x=>x.Name=="MakeButton" && x.Parameters.Count==9);
         Program.Assert(Calls(makeButton,"UiStyle","Round"),"Filter buttons stay rounded");
+        Program.Assert(Calls(makeButton,"UiStyle","ButtonSkin") && Calls(makeButton,"UiStyle","ButtonText"),"Toolbar/tracker actions share native visuals");
+        Program.Assert(Calls(Method("RowWidgetPool",".ctor"),"UiStyle","ButtonSkin"),"Cached row favourites use the same native skin");
+        Program.Assert(Calls(Method("TrackerPinControl",".ctor"),"UiStyle","ButtonSkin"),"Craft pin can match its adjacent native action");
+        var skin=Method("UiStyle","ButtonSkin");
+        foreach(string property in new[]{"spriteState","transition","colors"})
+            Program.Assert(skin.Body.Instructions.Any(i=>i.Operand is MethodReference c && c.Name=="get_"+property) &&
+                skin.Body.Instructions.Any(i=>i.Operand is MethodReference c && c.Name=="set_"+property),"Keep native interaction visuals: "+property);
+        Program.Assert(!skin.Body.Instructions.Any(i=>i.Operand is MethodReference c && (c.Name=="Instantiate" || c.Name=="get_onClick" || c.Name=="AddListener")),
+            "Skin copying must not clone native action callbacks");
+        Program.Assert(!Method("UiStyle","Selected").Body.Instructions.Any(i=>i.Operand is MethodReference c && (c.Name=="set_colors" || c.Name=="set_transition" || c.Name=="set_spriteState")),
+            "Filter/pin selection must retain native hover, pressed and disabled states");
         Program.Assert(Calls(Method("RowFavouriteButton","OnPointerClick"),"RowClickBinding","get_Version"),"Mouse click must reject old binding generation");
         Program.Assert(m.GetType("CraftyQoL.RowFavouriteButton").BaseType.FullName=="UnityEngine.UI.Button");
         Program.Assert(!m.GetType("CraftyQoL.RowFavouriteButton").Methods.Any(x=>x.Name=="OnSubmit"),"Keep native keyboard/controller submission");

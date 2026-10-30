@@ -8,7 +8,7 @@ Craft faster. Find recipes, track materials and organise storage without leaving
 
 **Valheim 1.0.21** · **BepInExPack 5.4.2351** · **Client-side**
 
-See the [changelog](CHANGELOG.md) for the latest improvements and known limitations.
+See the [changelog](CHANGELOG.md) for released and upcoming changes. [In-game screenshots](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.3#screenshots) showcase the published build.
 
 ## Features
 

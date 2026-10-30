@@ -22,8 +22,6 @@ namespace CraftyQoL
             _parking.transform.SetParent(gui.transform,false);
             try
             {
-                Image native=gui.m_tabCraft.GetComponent<Image>();
-                if(!native || !native.sprite)throw new NotSupportedException("Native row-button image unavailable.");
                 _template=new GameObject("CraftyQoL.RowWidgets",typeof(RectTransform));
                 _template.SetActive(false);_template.transform.SetParent(_parking.transform,false);
                 var root=(RectTransform)_template.transform;
@@ -34,11 +32,8 @@ namespace CraftyQoL
                 rect.anchorMin=rect.anchorMax=rect.pivot=new Vector2(1,0.5f);
                 rect.anchoredPosition=Vector2.zero;rect.sizeDelta=new Vector2(ToolbarGeometry.SmallButton,ToolbarGeometry.SmallButton);
                 Image image=go.GetComponent<Image>();
-                image.sprite=native.sprite;image.color=native.color;image.material=native.material;image.maskable=native.maskable;
-                image.type=native.type;image.preserveAspect=native.preserveAspect;image.pixelsPerUnitMultiplier=native.pixelsPerUnitMultiplier;
-                UiStyle.NativeBorder(image);UiStyle.Round(image);
                 var button=go.GetComponent<RowFavouriteButton>();
-                button.targetGraphic=image;button.transition=Selectable.Transition.ColorTint;button.colors=UiStyle.Colours(UiStyle.Surface);
+                UiStyle.ButtonSkin(gui.m_stackAllButton,button,ToolbarGeometry.SmallButton);UiStyle.Round(image);
                 button.navigation=new Navigation{mode=Navigation.Mode.None};button.interactable=false;
                 var tip=UiStyle.Tooltip(gui,go);tip.m_topic="";tip.m_text="";tip.m_gamepadFocusObject=null;
                 UiStyle.AddStar(button);UiStyle.AddSelectionMarker(button);
