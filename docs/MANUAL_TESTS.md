@@ -1,6 +1,6 @@
 # Manual acceptance
 
-Offline checks do not prove UI/gameplay/multiplayer safety. Use disposable test items/worlds for destructive-failure simulations. Latest unreleased source needs native-height Craft pin/Sort alignment, square native row styling and reused favourite/tooltip controls checked across scales and stations. Creative inventory functionality with actual no-placement-cost received maintainer confirmation; timing tests alone cover no additional interactions.
+Offline checks do not prove UI/gameplay/multiplayer safety. Use disposable test items/worlds for destructive-failure simulations. The 0.18.3 build needs native-height Craft pin/Sort alignment, square native row styling and reused favourite/tooltip controls checked across scales and stations. Creative inventory functionality with actual no-placement-cost received maintainer confirmation; timing tests alone cover no additional interactions.
 
 ## Crafting/tracker
 
