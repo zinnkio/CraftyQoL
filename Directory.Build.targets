@@ -19,6 +19,6 @@
   </ItemGroup>
   <Target Name="ValidateLocalReferences" BeforeTargets="ResolveReferences" Condition="'$(IsValheimPlugin)' == 'true'">
     <Error Condition="!Exists('$(GameManaged)\assembly_valheim.dll')" Text="Set ValheimRoot in ignored Environment.props or with -p:ValheimRoot to a local client installation." />
-    <Error Condition="!Exists('$(BepInExCore)\BepInEx.dll') or !Exists('$(BepInExCore)\0Harmony.dll')" Text="BepInEx/Harmony references missing. Set BepInExCore or acquire the pinned pack; see docs/DEVELOPMENT_ENVIRONMENT.md." />
+    <Error Condition="!Exists('$(BepInExCore)\BepInEx.dll') or !Exists('$(BepInExCore)\0Harmony.dll')" Text="BepInEx/Harmony references missing. Set BepInExCore or acquire the pinned pack; see docs/BUILDING.md." />
   </Target>
 </Project>

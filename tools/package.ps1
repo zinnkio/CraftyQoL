@@ -5,6 +5,7 @@ Push-Location $projectRoot
 try {
     $revision = (& git rev-parse HEAD).Trim()
     if ($LASTEXITCODE -ne 0 -or (& git status --porcelain)) { throw 'A clean source checkpoint is required.' }
+    & (Join-Path $PSScriptRoot 'check-publication.ps1')
     $environmentFile = Join-Path $projectRoot 'Environment.props'
     if (Test-Path -LiteralPath $environmentFile) {
         [xml]$environment = Get-Content -LiteralPath $environmentFile -Raw
@@ -56,14 +57,15 @@ try {
         regressionChecksPassed=$checks; tooltipChecksPassed=2; totalChecksPassed=($checks+2); fullRegressionRun=$true
         harmonyTargets=9; benchmarkRun=$false; gameExecutedByBuild=$false; debugSymbols=$false; pluginSha256=$pluginHash
     }
-    $info | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $stage 'build-info.json') -Encoding UTF8
+    # Developer provenance stays beside the player ZIP, never in its install contents.
+    $info | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $release 'build-info.json') -Encoding UTF8
     $zip = Join-Path $release ($name+'.zip')
     Compress-Archive -Path (Join-Path $stage '*') -DestinationPath $zip -CompressionLevel Optimal
     Add-Type -AssemblyName System.IO.Compression.FileSystem
     $archive = [IO.Compression.ZipFile]::OpenRead($zip)
     try {
         $actual = @($archive.Entries | Where-Object { $_.Name } | ForEach-Object { $_.FullName.Replace('\','/') } | Sort-Object)
-        $expected = @(@($files.Keys)+'build-info.json' | Sort-Object)
+        $expected = @($files.Keys | Sort-Object)
         if (Compare-Object $expected $actual) { throw 'Archive allowlist audit failed.' }
     } finally { $archive.Dispose() }
     $standalone = Join-Path $release 'CraftyQoL.dll'

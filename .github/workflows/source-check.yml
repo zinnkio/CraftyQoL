@@ -1,0 +1,12 @@
+name: Source hygiene
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  source:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check publication allowlist, private-path patterns and documentation links
+        shell: pwsh
+        run: ./tools/check-publication.ps1

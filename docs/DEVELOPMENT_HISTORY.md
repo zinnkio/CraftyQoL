@@ -1,113 +1,71 @@
 # Development history
 
-This chronological summary is based on pre-publication Git checkpoints, versioned design records and validation notes. Public Git history begins with a sanitised source snapshot; private history, machine settings and internal audit files are not published. Earlier versions were named **Food Crafting UI**. Implementation, static tests and user feedback are distinguished from full in-game validation.
+This chronology consolidates versioned design notes, local Git checkpoints and validation records. Public history starts with the sanitised snapshot; private machine records and inspection artifacts are not published. Earlier versions were called Food Crafting UI. Offline checks, maintainer reports and measured runtime results are distinct evidence.
 
-## 25 October 2026 — concept, investigation and 0.1
+## 25 October 2026 — research and 0.1 foundation
 
-The initial goal was a lightweight client-side extension to food crafting: preserve the native window, avoid floating crafting overlays, and improve navigation without changing progression, recipes, requirements or consumption. Cauldron and Food Preparation Table were investigated first; other benches were deliberately outside initial scope.
+The original goal was native food-recipe navigation at Cauldron and Food Preparation Table without changing progression or crafting. Installed assemblies, prefab identities, recipe reconstruction, assets and input were investigated before implementation. CraftIndex and CraftSort informed API research only; no source/assets were incorporated. BepInEx/Harmony sufficed without Jotunn.
 
-Research covered BepInEx/Harmony, actual game assembly signatures, native recipe-list construction, station prefab identities, item statistics, lifecycle, UI assets and input. Existing mods were technical API references only. Independent source/specification and minimal dependencies were explicit requirements. BepInEx/Harmony were sufficient, so no Jotunn dependency was introduced. Source inspection and compilation were never treated as game loading/rendering evidence.
+Guarded lifecycle integration, pure classifiers/queries, native search, layout restoration and scoped input followed. Stable station/asset/output identities and recoverable plugin-only favourites avoided translated-name keys and save changes. Runtime loading/rendering were not inferred from compilation.
 
-The first implementation established guarded initialization, native toolbar/recipe-list integration, scoped keyboard/controller input and layout cleanup. Pure category/query/sorting code was separated from Unity presentation. Stable IDs used exact station, recipe asset and output prefab rather than translated names. Recoverable plugin-owned favourites, row nutrition symbols, audited packaging and manual checks followed. No game binaries or assets were redistributed.
+## 26 October — 0.2–0.6 controls, discovery and provenance
 
-## 26 October 2026 — 0.2 direct controls and discovery
+Direct Type/Sort groups replaced cycling controls. Ready/craftable-only and the old selected-recipe favourite Pin were removed; row stars and favourites-only stayed. The later tracker pin is independent. Evaluating representative foods changed the proposed 60% threshold to overlapping positive stats at 50% of the maximum, including balanced/Eitr foods and verified edible conversions.
 
-Visual refinement removed the selected-recipe toolbar Pin/favourite shortcut and craftable-only Ready feature, including unused eligibility/polling paths. Row favourites/favourites-only stayed. This obsolete Pin was distinct from the later independent recipe tracker pin.
+Biome squares used player-specific discovery, never recipe availability as a discovery proxy. Unknown names/colours/future positions were hidden. Font-independent stars, equal-size squares, compact search, fitted tooltip backgrounds and Misc naming refined presentation.
 
-Cycling controls became directly selectable All/H/S/E and Game/H/S/E groups with independent numerical sorting and overlapping category membership. The research proposal of60% of the highest food stat was evaluated, not assumed; the implemented rule uses50% with positive-stat handling and intermediate-food relationships. Search dimensions, selection feedback, native styling, keyboard/controller routes and lifecycle restoration were refined.
+The biome overhaul reviewed all 69 then-installed food recipes. Explicit provenance, complete/partial ingredient evidence, alternative ingredients, common supplies and curated themes remained distinct; mixed sources kept multiple associations. Reliable coverage rose from 42 to 67, with two intentionally uncertain cases. Factual fixtures and discovery-mask/ambiguity tests supported this, without claiming visual validation.
 
-Compact biome squares were gated by player-specific discovery records, not available recipes or inferred recipe origins. Undiscovered names, identifying colours and future positions were suppressed; uncertainty failed closed. Pure geometry/disclosure/input tests supported implementation, with visual/scaling acceptance explicitly manual.
+## 26–27 October — 0.7–0.8 equipment
 
-## 26 October 2026 — 0.5 presentation and 0.6 provenance
+Workbench/Forge Craft added eight overlapping equipment categories from native item/skill/tool/projectile metadata, independent Game/A–Z sorting and collapsed discovered-biome controls. Upgrade/Repair stayed native. Black Forge followed verified station/recipe inspection, shared native category icons and expanded ingredient mappings. Estimated-biome tildes were removed from recipe names without changing inference.
 
-The0.5 pass refined shared toolbar geometry, native control surfaces, selection and star styling. Subsequent changes matched biome/sort square dimensions, renamed uncertain classification to Misc, fitted backgrounds to wrapped tooltip text and made inline favourite buttons square. Font-independent outline/filled stars gained controller access. Tooltips initially received50% opaque backing; later0.14 increased it for readability.
+## 27 October — 0.9–0.13 tracker, Galdr and Mead
 
-The0.6 overhaul reviewed all69 then-installed food-station recipes and ingredient provenance. Explicit output associations, ingredient-derived evidence and uncertainty remained distinct. Mixed ingredients produced multiple biome memberships; partial evidence preserved known associations; alternative ingredients retained only shared reliable origins. Common/domestic/trader supplies did not silently imply progression. Curated feast/serpent themes and exact-key user overrides remained documented exceptions. Intermediate cooked products followed verified conversion relationships.
+The separate HUD tracker gained multiple stable pins scoped to character/world, Materials/Recipes tabs, direct ingredient aggregation, carried-only counts, quality/alternative planning, minimisation, scrolling and remembered positions. Missing/unknown pins stayed safe. Inventory notifications drove updates; favourites remained separate.
 
-Reviewed factual fixtures, ambiguous/modded/missing inputs and every discovery-mask combination were tested. Known associations improved from42 to67 of69, with two intentionally uncertain cases;200 combined offline checks passed at that milestone. These results supported classifier evidence, not live UI rendering. Managed cached-query timing/allocation was recorded separately from Unity frame cost.
+Galdr Table reused equipment infrastructure. Mead Ketill initially shared food presentation, then gained effect-based Healing/Stamina/Eitr/Resistance/Other categories through fermentation metadata, with no food badges or biome controls. Food stations adopted collapsed biome disclosure without recipe refreshes.
 
-## 26–27 October 2026 — 0.7 equipment and 0.8 Black Forge
+The tracker became compact and dark-backed with `owned/required` counts. Redundant reorder arrows were removed. A Mead category click failing until A–Z was clicked was traced to an omitted query-equality field and fixed; classification itself was unchanged. Early F8 hide/edit behaviour was later retired.
 
-Workbench/Forge equipment Craft support used verified native item types, skills, damage/projectile and recipe metadata. Eight categories allowed overlaps without misusing food statistics. Search, favourites, Game/A-Z sorting and collapsed discovered-biome controls reused the existing view/query architecture. Upgrade/Repair isolation was required.
+## 28 October — 1.0.21 compatibility and 0.14–0.15 UI
 
-The0.8 pass replaced labels with native category icons and added Black Forge after station/recipe/lifecycle inspection. Equipment/ingredient classification expanded without duplicating the UI/query pipeline or adding Harmony patches. Estimated-biome tildes disappeared from recipe names, while provenance/tooltips/inference remained. Food classification was preserved.
+After the actual game update, 192 relevant API records and 126 crafting UI records were compared: no relevant signature/access/type break; a native scrolling touch guard was noted. Baked Poteitr, Kale Chips and Oven Pancake moved from Cauldron to Food Preparation Table. Narrow live-structure-gated identity aliases preserved development favourites/pins; ingredients, yields and biome logic stayed unchanged. Old factual fixtures remain purposeful compatibility baselines.
 
-## 27 October 2026 — 0.9 persistent tracker
+Subtle rounded controls/tooltips, 65% tooltip backing and H/S/E colour markup reused native assets. The tracker frame inherited the game's environment-lit material. Crafting controls then followed native closing animation before cleanup.
 
-The tracker introduced an independent HUD lifecycle separate from crafting toolbar state and favourites. Multiple unique stable recipe pins were scoped to character/world through plugin-owned JSON, without editing saves. Direct ingredients aggregate for one craft per recipe, respecting quantities/output amounts and quality/alternative planning. Only carried inventory counts; no chest search or recursive subcrafting occurs.
+Tracker interaction moved to normal inventory access, with Settings dragging and a separate display pin for passive gameplay visibility. F8 and two redundant patches were removed, leaving nine normal targets. These changes retained saved positions and recipe identities.
 
-Materials/Recipes tabs, expanded notes/removal, minimisation, scrolling, remembered position and safe missing/unknown restoration followed. Native inventory notifications invalidate counts; cached metadata avoids scene/storage scanning. Pure aggregation/persistence tests and native API contracts preceded manual HUD/controller acceptance. Vanilla consumption/unlocks remained untouched.
+## 29 October — 0.16–0.17 inventory, storage and pointer repair
 
-## 27 October 2026 — 0.10 Galdr, 0.11 Mead and 0.12 refinement
+Stationless Craft gained adaptive Filters, All/Equipment/Food/Mead/Other families, contextual categories, shared search/favourites/pins and Food/Equipment biomes. Actual personal/world no-cost grants were distinguished from debugmode. Only vanilla availability enters queries; canonical identities prevent cross-view duplicates and creative-only pins become anonymous after access ends. A 481-recipe audit found 43 stationless assets without identity collisions.
 
-Galdr Table reused equipment Craft/tracker infrastructure after targeted qualification. Mead Ketill then gained filtering/pinning; the detail pin became a square pushpin beside Craft. Tracker visibility across chest access was addressed.
+Storage added explicit category Sort & Stack for 11 inspected chest/cart/ship roots. Metadata-compatible merging, local ownership/access checks, exact packet validation and a synchronous original-reference journal precede one native save notification. Custom-data stacks never merge; unsafe or unsettled states decline. No custom networking/server dependency. Pure fault injection, quantity conservation and idempotence tests supplement still-required non-host multiplayer tests.
 
-Mead initially reused food-oriented presentation.0.12 replaced this with dedicated All/Healing/Stamina/Eitr/Resistance/Other effect categories. Fermentation links connect bases to final effects; restoration/regen/resistance can overlap, utility/unknown goes Other. Food-stat badges and Mead biome controls were removed. Food stations adopted equipment's default-collapsed biome disclosure, without rebuilding recipes for disclosure changes.
+Visible but unclickable tracker controls were repaired by placing the interactive panel in the native inventory canvas and returning it to HUD for passive display. The maintainer confirmed recovery; no failed live raycast proved a particular filter button caused the regression.
 
-The tracker became compact, dark-backed and content-sized, with internal scrolling, native icons and owned/required quantities. Individual expanded requirements reused that notation. Multiple pins, material math and persistence remained. Redundant reorder arrows were subsequently removed while preserving insertion order. Early edit/hide interaction used F8; later versions replaced it.
+## 29 October — 0.18 public release
 
-## 27 October 2026 — 0.13 refresh/visibility fixes
+Project/assembly/namespace/plugin paths became CraftyQoL (`io.github.zinnkio.craftyqol`); preferences intentionally started fresh without deleting old files or saves. A separate publication snapshot preserved MIT terms and used noreply metadata. Private history, proprietary assemblies/assets and internal audits were excluded.
 
-A Mead category filter appeared to update only after A-Z was selected. Unchanged-query comparison omitted the potion category; adding every effective predicate restored independent refresh. This was query equality, not altered effect classification.
+Discovery explicitly gated biome tooltip name lookup; recipe tooltips stopped reporting biome provenance. Tracker visibility investigation showed it was present but overlapped inventory, so only its new default moved to top centre. Existing positions stayed intact.
 
-Tracker visibility expanded across inventory/stations with hide/restore refinement. The versions preserved native availability/crafting, favourites, material aggregation and safe persistence. User feedback drove UI changes; automated checks and in-game reports stayed separate evidence levels.
+Public 0.18.2 shipped with installation downloads, early AI disclosure and acknowledgements. Release validation passed 691 regression/API/compiled checks and two tooltip checks. This is the current downloadable release; later source changes below are unreleased.
 
-## 28 October 2026 — 1.0.21 compatibility / 0.13.1
+## 30 October — creative-opening measurement and local refinements
 
-The game update completed before the audit proceeded from1.0.20 to1.0.21. Relevant crafting, recipe, inventory and HUD APIs/private bindings were compared instead of regenerating unrelated recipe audits.192 relevant API records and126 crafting UI records were inspected: no relevant signature/access/type changes, with a native scrolling touch guard noted.
+Opening a large creative list caused a reported 300–500 ms hitch. Opt-in instrumentation measured main-thread phases and native/owned row counts. Its first capture was invalid for full-mod comparison: the diagnostic Harmony owner triggered the compatibility guard. Exact registered-hook recognition, startup self-checks and observed-integration validity fields repaired the diagnostic. The initial capture was excluded.
 
-Baked Poteitr, Kale Chips and Oven Pancake moved from Cauldron to Food Preparation Table. A narrow actual-structure-gated compatibility path preserved existing development-plugin favourites/pins where required; biome inference/gameplay were unchanged.45 targeted persistence/compatibility cases plus API/compiled checks supported the update. This historical alias is distinct from the later deliberately fresh rebrand preferences.
+Three sequential sessions each had one first opening plus nine repeats, with 399 displayed rows and matching recorded access/recipe/pin counts. Prepared templates and bounded reuse of owned row widgets reduced repeated median synchronous Show from 163.678 to 61.851 ms and owned row setup from 115.716 to 14.578 ms. Repeated capture-window peak frame intervals fell from 300.171 to 201.289 ms; a features-disabled control measured 121.054 ms. The control retained BepInEx/diagnostic hooks and was not pure vanilla. Managed allocations were unavailable. Native row construction and filtering did not improve; phase totals overlap and cannot be added.
 
-## 28 October 2026 — 0.14 styling, 0.14.1 lighting and 0.15 lifecycle
+The reuse implementation passed 712 full checks plus two tooltip checks and targeted profiler contracts. The maintainer found inventory Craft functionality acceptable with actual no-placement-cost, but still reported opening/filter hitches. Broader station/controller/scaling acceptance remains open.
 
-Texture-preserving rounded mesh effects refined owned buttons, selection borders, rows and fitted tooltips. Existing Health/Stamina/Eitr colours applied to corresponding tooltip words/values. Tooltip opacity increased to65%. Native textures/materials/fonts/feedback remained; original state restored on scope exit. No custom texture or global shader replacement was added.
+Native recipe-row backgrounds were subsequently restored to square styling while retaining rounded controls/tooltips; eight focused checks passed. The maintainer reported improved appearance, not a new timing result. Craft pin height then followed Craft, and container Sort followed Stack All; 29 focused checks passed, visual alignment remains manual. No further speedup is claimed. The reported Sort-unavailable-until-item-move case remains deferred with its safety check intact.
 
-The tracker frame inherited native environment-lit UI material/tint while preserving dark backing/readable text. No guessed time-of-day colour polling was introduced. Rendered lighting/readability still required manual observation.
+## 30 October — repository/package cleanup
 
-Crafting controls then remained attached/noninteractive during native close animation instead of disappearing before the window moved away. Cleanup followed the verified hidden state; rapid reopen and Upgrade/unsupported cleanup stayed explicit.
+Historical reports and one-off inspection tools were archived privately. Current architecture/build/config/compatibility/manual guidance and this chronology replace duplicate records. All functional source, tests and seven factual fixtures were retained. Packaging now keeps build provenance beside the archive; the player ZIP contains only the plugin, installation notes, MIT licence and third-party notices. Cleanup changes no gameplay, schema or Harmony behaviour and creates no new release.
 
-Tracker interaction switched to normal inventory access. Settings exposed dragging and a separate persistent display pin; default unpinned visibility followed inventory. F8/eye controls and two redundant input patches were removed, leaving nine targeted Harmony methods. Optional v1 keepVisible preserved tracker documents without changing recipe identities.648 full offline checks plus two integration checks passed at this milestone.
+## Validation approach
 
-## 29 October 2026 — 0.16 inventory Craft
-
-Stationless inventory Craft gained an adaptive Filters toggle for large creative lists: All/Equipment/Food/Mead/Other families, appropriate contextual categories, shared search/favourites/Game-A-Z/pinning, and Food/Equipment-only biomes. Manual disclosure lasts for the inventory session; compact geometry restores when hidden/closed.
-
-Player.NoCostCheat, world NoCraftCost and AllRecipesUnlocked were investigated separately; debugmode alone was not a no-cost grant. Filtering receives only vanilla availability. Access changes refresh that source; creative-only tracker pins become anonymous safely when grants/knowledge disappear.
-
-Canonical identities remain independent of the viewed interface, avoiding station/inventory duplicates. Inventory origin is separate from identity. A targeted481-asset audit found43 stationless assets and no canonical collisions. Pure5,000-record, session/geometry/knowledge cases supported the extension;662 full offline checks plus two integration checks passed. Normal inventory filtering later received user confirmation; creative transitions remain unverified in game.
-
-## 29 October 2026 — 0.17 storage and 0.17.1 pointer repair
-
-Storage research verified11 chest/cart/ship roots, legitimate open/ownership transfer, inventory serialization and native change/save/dirty replication. Explicit native-header Category sorting conservatively consolidates compatible partial stacks and packs top-left. Exact runtime metadata/shared references, capacities, quantities and proposed packets are validated; every nonempty custom-data stack stays separate.
-
-A synchronous original-reference journal avoids intermediate move callbacks. One qualified native change notification publishes validated state after source/saved-byte/authority rechecks. Unpublished uncontaminated local changes may restore; confirmed publication is never overwritten by old network state. Unknown schemas/callbacks/critical patches/unsettled synchronization decline. No server mod, custom RPC, ownership bypass, player inventory sort or cross-container transfer.
-
-Twenty-four storage cases include120 generated idempotence inventories and transaction fault injection, plus native/compiled authority contracts.0.17 passed688 full offline checks and two tooltip checks. The user later confirmed ordinary sorting; exhaustive preservation/persistence and non-host player-hosted/dedicated multiplayer tests remain open.
-
-The tracker was reported visible with Settings/tabs but unclickable after inventory UI additions.0.17.1 hosted its existing interactive panel under native inventory Canvas, returning to HUD for passive display, preserving HUD coordinates/scale/drag and saved position.24 targeted checks passed and the user confirmed interaction worked again. No failed live raycast was captured; this supported diagnosis does not prove any particular filter/Sort button caused the regression.
-
-## 29 October 2026 — 0.18 CraftyQoL public preparation
-
-Project/assembly/namespace/workspace/build/test references and plugin-owned paths were renamed. CraftyQoL0.18.0 uses GUID io.github.zinnkio.craftyqol and CraftyQoL.dll. Preferences intentionally start fresh; old files/settings/saves remain untouched. All53 runtime files were compared with the working baseline under name/metadata substitutions to prevent functional changes.
-
-A private backup preceded renaming. A separate allowlisted publication snapshot starts fresh public history with noreply commit metadata; private history/paths/settings, inspection/decompilation files, proprietary libraries/assets, archives and internal reports are excluded. Existing MIT terms and historical copyright notice are retained; no new licence was selected.
-
-Release builds without warnings/errors;688 full regression/API/compiled-plugin plus two tooltip checks pass, including identity and nine-patch scope. No renamed game launch/deployment is claimed. Optimisation review is local/report-only and authorises no runtime modifications.
-
-## 29 October 2026 — 0.18.1 tooltip secrecy
-
-After public preparation, biome filter naming gained an explicit player-discovery guard before tooltip lookup. Existing compact discovery-only palette/neutral reset/Misc behavior remains. Recipe-row biome associations/provenance/disclosure text were removed for food, equipment and inventory views, without altering internal classification or filtering. Nutrition and equipment/Mead categories stay visible. Twelve focused disclosure cases (including every discovery mask) and two compiled tooltip/identity/scope checks pass; rendered behavior remains manual. This local change is separate from the initial public0.18.0 snapshot.
-
-## 29 October 2026 — 0.18.2 tracker default position
-
-User retest confirmed the tracker was present, overlapping inventory at the original default. A temporary technical trace confirmed active/in-bounds UI; a render-priority inference was not sufficient evidence of a bug. Diagnostics and an uninstalled provisional change were removed. Only new-document default X/Y moved to top centre, with existing custom positions/pins preserved. Runtime source comparison against0.18.1 verified no other behavior changes;25 focused tracker/compiled UI checks passed. No public upload pending user verification.
-
-## 29 October 2026 — downloadable public release
-
-The maintainer declared the mod deployable after in-game testing and requested a downloadable GitHub release. Public-facing documentation was shortened around installation and controls, with an early AI-development disclosure and explicit thanks to CraftIndex/CraftSort as audited technical references. Version0.18.2 keeps the existing identity and tested runtime code. Release preparation adds an install ZIP, standalone DLL, checksums and public-source provenance, excludes debug symbols/private paths and retains the existing MIT licence. Automated release validation supplements maintainer feedback without claiming exhaustive creative/controller/multiplayer coverage.
-
-## Testing/performance evolution
-
-Coverage grew from pure queries/classification/geometry to reviewed factual fixtures, exhaustive discovery masks, atomic preference recovery, tracker aggregation/knowledge/privacy and fault-injected storage transactions. Installed assembly/body and compiled-plugin contracts constrain integration without redistributing game code. Small changes use targeted checks; broader milestones use justified full regression.
-
-Inspection, compilation, pure tests, user reports, rendered UI validation and multiplayer profiling remain distinct. Cached metadata, debounced search, pooled rows and inventory notifications avoid obvious repeated work; disclosure alone does not rebuild recipes. Synthetic managed timings are not Unity frame-time/network evidence. Creative/controller/scaling/exhaustive storage/network acceptance remains in [MANUAL_TESTS.md](MANUAL_TESTS.md).
+Pure classifications, every discovery mask, query composition, atomic preference recovery, tracker math and fault-injected storage plans are tested independently of Unity. Installed API/body and compiled-plugin contracts catch integration drift. Small edits use targeted checks; larger integration/packaging milestones justify a full suite. Compilation does not prove rendering, multiplayer delivery or all mod combinations; see [manual checks](MANUAL_TESTS.md).

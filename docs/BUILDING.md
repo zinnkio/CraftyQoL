@@ -34,9 +34,11 @@ $plugin = 'src/CraftyQoL/bin/Release/net472/CraftyQoL.dll'
 .\tools\dotnet.ps1 run --project tests/CraftyQoL.Tests -c Release --no-build -- --tooltip-only (Join-Path $managed 'assembly_guiutils.dll') $plugin
 ```
 
-API checks inspect local assemblies without loading the game. Compiled contracts enforce identity, patch scope, discovery, tracker isolation and storage authority/controlled writes. Factual JSON fixtures contain reviewed recipe associations/equipment/effects and1.0.21 food moves, not game assemblies, sprites or serialized asset bundles.
+API checks inspect local assemblies without loading the game. Compiled contracts enforce identity, patch scope, discovery, tracker isolation and storage authority/controlled writes. All seven factual JSON fixtures remain required; their [provenance and consumers](../tests/CraftyQoL.Tests/Data/README.md) explain the older version labels. No fixture contains game code, sprites or serialized asset bundles.
 
-Targeted switches: `--tracker-only`, `--inventory-only`, `--mead-only`, `--equipment-only`, `--storage-only`, `--visual-only`. Optional `--benchmark` is a synthetic pure-query microbenchmark, not Unity profiling/multiplayer testing. Machine timings are not game frame costs.
+Targeted switches: `--tracker-only`, `--inventory-only`, `--mead-only`, `--equipment-only`, `--storage-only`, `--visual-only`. `--row-widgets <plugin>` checks reusable control contracts. `--opening-profile <assembly_valheim> <UnityEngine.UI> <plugin>` checks optional timing instrumentation. Optional `--benchmark` is a pure-query microbenchmark, not Unity profiling/multiplayer testing. Machine timings are not game frame costs.
+
+Before committing public files, run `./tools/check-publication.ps1`. This source-only guard checks the allowlist, sensitive-content patterns, local Markdown links and ignore rules. GitHub also runs it on pushes/PRs. It supplements manual review: ignore rules cannot prevent deliberate force-adds, and no pattern scanner proves absence of every secret. Never push private development history.
 
 ## Package
 
@@ -46,6 +48,8 @@ From a clean public checkout with ignored reference configuration:
 .\tools\package.ps1
 ```
 
-The helper builds Release without debug symbols, runs full API/compiled and tooltip checks, and writes an install ZIP, standalone DLL and SHA256SUMS.txt under ignored artifacts/CraftyQoL-<version>/. The ZIP contains only the plugin, short installation notes, licence/notices and build provenance. Source paths are mapped to a neutral prefix; proprietary references/PDBs/settings are excluded. It refuses dirty source trees or existing release output, never overwrites older artifacts, and never deploys, launches or publishes anything.
+The helper checks source hygiene, builds Release without debug symbols, runs full API/compiled and tooltip checks, and writes an install ZIP, standalone DLL, SHA256SUMS.txt and developer build-info.json under ignored artifacts/CraftyQoL-<version>/. The ZIP has exactly four files: BepInEx/plugins/CraftyQoL/CraftyQoL.dll, README.md, LICENSE and THIRD_PARTY_NOTICES.md. The README is sourced from docs/RELEASE_INSTALL.md. Build provenance stays outside the player ZIP. No runtime dependency besides the separately supplied game/BepInEx is bundled.
+
+Source paths are mapped to a neutral prefix; proprietary references/PDBs/settings are excluded. Packaging refuses dirty source trees or existing release output, never overwrites older artifacts, and never deploys, launches or publishes anything. Keep older builds outside the publication checkout before creating another package with the same version. A source-only cleanup does not change the plugin version or replace a published release.
 
 Byte reproducibility depends on SDK, source revision and reference inputs. Successful checks supplement [manual validation](MANUAL_TESTS.md); they do not establish every runtime/mod/network combination.

@@ -20,6 +20,8 @@ Only legitimately opened, locally owned/in-use storage with valid access and mat
 
 ## Known limitations
 
+- Large creative lists can still hitch on opening/filter changes; the unreleased source reduces owned-row setup but does not remove native UI costs.
+- Some containers decline sorting with "Waiting for matching native container data" until a native item move. The mismatch cause remains unmeasured; no safety bypass is provided.
 - Other recipe organisers and inventory/container mods may disable or conflict with integration; compatibility is conservative.
 - Creative transitions, controller/UI-scale combinations and non-host multiplayer do not have exhaustive documented validation.
 - Silent foreign metadata/inventory changes and newer game schemas are unqualified; fallback is Other/Misc or disabled integration.

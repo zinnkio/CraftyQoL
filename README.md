@@ -4,9 +4,11 @@ Craft faster. Find recipes, track materials and organise storage without leaving
 
 **AI disclosure:** CraftyQoL was created using OpenAI Codex, with maintainer-led in-game testing and feedback.
 
-**[Download the latest release](https://github.com/zinnkio/CraftyQoL/releases/latest)** · [Installation](docs/INSTALLATION.md) · [Report a bug](https://github.com/zinnkio/CraftyQoL/issues/new)
+**[Download the latest release](https://github.com/zinnkio/CraftyQoL/releases/latest)** Â· [Installation](docs/INSTALLATION.md) Â· [Report a bug](https://github.com/zinnkio/CraftyQoL/issues/new)
 
-**Valheim 1.0.21** · **BepInExPack 5.4.2351** · **Client-side**
+**Valheim 1.0.21** Â· **BepInExPack 5.4.2351** Â· **Client-side**
+
+The `main` branch includes unreleased changes. Use the release download for the published build; see the [changelog](CHANGELOG.md).
 
 ## Features
 
@@ -42,7 +44,7 @@ A standalone DLL is also available on the release page. Updating CraftyQoL prese
 | Move or keep tracker visible | Tracker Settings: drag the header or select the display pin |
 | Organise storage | Sort button in the opened container header |
 
-Saved tracker positions are retained. [Configuration and preferences](docs/CONFIGURATION.md) · [Full installation guide](docs/INSTALLATION.md).
+Saved tracker positions are retained. [Configuration and preferences](docs/CONFIGURATION.md) Â· [Full installation guide](docs/INSTALLATION.md).
 
 ## Compatibility
 
@@ -56,6 +58,6 @@ Thanks to **[CraftIndex](https://github.com/jg224/CraftIndex)** by **jg224** and
 
 Thanks also to the [BepInEx](https://github.com/BepInEx/BepInEx) and [HarmonyX](https://github.com/BepInEx/HarmonyX) maintainers.
 
-[Build from source](docs/BUILDING.md) · [Development history](docs/DEVELOPMENT_HISTORY.md) · [MIT licence](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md)
+[Build from source](docs/BUILDING.md) Â· [Development history](docs/DEVELOPMENT_HISTORY.md) Â· [MIT licence](LICENSE) Â· [Third-party notices](THIRD_PARTY_NOTICES.md)
 
 Not affiliated with Iron Gate or Coffee Stain. Game assets and dependencies are not bundled.

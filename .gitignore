@@ -1,8 +1,16 @@
-# Local tools, SDKs, third-party references, proprietary data and test profiles
-.tools/
-.references/
-.inspection/
-.test-profile/
+# Local prerequisites, inspection, rollback and publication workspaces
+/.tools/
+/.references/
+/.inspection/
+/.test-profile/
+/.backups/
+/.publication/
+/Environment.props
+/OPTIMISATION_AUDIT.md
+/docs/PROGRESS.md
+/docs/HANDOFF.md
+
+# Generated output and editor caches
 artifacts/
 packages/
 bin/
@@ -16,10 +24,18 @@ obj/
 *.mdb
 *.zip
 *.log
-Environment.props
 __pycache__/
+*.dmp
+*.7z
+*.nupkg
 
-# Private rollback, sanitised publishing workspace and report-only optimisation audit
-.backups/
-.publication/
-OPTIMISATION_AUDIT.md
+# Credentials and personal settings
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+.aws/
+.codex/
+.agents/

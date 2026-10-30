@@ -1,6 +1,6 @@
 # Manual acceptance
 
-Offline checks are prerequisites, not proof of UI/gameplay/multiplayer safety. Use disposable test items/world for safety cases. Current0.18.2 changes the new default to top centre; check fresh/default position, inventory open/close, Settings dragging and saved custom position. User confirmed the tracker was already visible; there is no layering/visibility change in this version. Prior0.18.1 tooltip secrecy remains implemented.
+Offline checks do not prove UI/gameplay/multiplayer safety. Use disposable test items/worlds for destructive-failure simulations. Latest unreleased source needs native-height Craft pin/Sort alignment, square native row styling and reused favourite/tooltip controls checked across scales and stations. Creative inventory functionality with actual no-placement-cost received maintainer confirmation; timing tests alone cover no additional interactions.
 
 ## Crafting/tracker
 
@@ -9,6 +9,7 @@ Offline checks are prerequisites, not proof of UI/gameplay/multiplayer safety. U
 - [ ] Inventory actual no-cost on/off while open, debugmode alone, world NoCraftCost and AllRecipesUnlocked separately. Native availability/manual session disclosure, five families/categories/large lists; no stale creative disclosure.
 - [ ] Cross-view canonical favourite/pin identity, restart/scoped preferences, unknown/modded/changed restoration and creative-only pins anonymised on exit. Carried-only totals/quality/alternative planning/output information.
 - [ ] Tracker tabs/Settings/Done/minimise/recipe controls in inventory/chest/stations/Upgrade. Drag/display-pin/hide-completed, closed unpinned hidden/pinned passive. Position/size across host/scales; dragging/split/modals/map/menu/loading/death input guards. Normal inventory binding/controller entry/Submit/back.
+- [ ] Favourite click/Submit after filtering and repeated reopen; a mouse press spanning row reuse must not toggle a different recipe.
 - [ ] Rapid open/close/switch/animation, no duplicates, tooltip fit/rounding/day-night readability, several resolutions/scales, no relocated vanilla panels.
 
 ## Storage
@@ -24,4 +25,4 @@ Offline checks are prerequisites, not proof of UI/gameplay/multiplayer safety. U
 - [ ] **Non-host player-hosted server**, unmodded host/observer: legitimate open, sort, observer reopen and exact comparison; contested open/handoff/denial/delay/disconnect/reconnect/persistence, including cart/ships.
 - [ ] **Non-host dedicated server without mod**, unmodded observer: repeat preceding matrix, server restart and every storage class. Verify native authority/access.
 
-Earlier user feedback confirms station UI, normal inventory filters, sorting and tracker interaction on development builds. Creative/exhaustive safety/controller/scaling/multiplayer remain open; rebrand only has offline evidence.
+Earlier user feedback confirms station UI, normal inventory filters, sorting and tracker interaction on development builds. Exhaustive creative transitions, safety, controller/scaling and multiplayer remain open. Track the reported first-open Sort decline separately; do not bypass its packet check.
