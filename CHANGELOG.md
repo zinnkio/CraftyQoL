@@ -1,11 +1,11 @@
 # Changelog
 
-## Unreleased
+## 0.18.3 - 30 October 2026
 
 - Optional validated creative-opening diagnostics and bounded reuse of owned recipe-row controls.
 - Native square recipe-row backgrounds; Craft pin and container Sort heights follow adjacent native buttons.
 - Consolidated developer documentation, preserved test fixtures and a four-file player ZIP; build provenance stays outside the ZIP.
-- Known limitations: large-list hitches and first-open Sort packet mismatches remain. No new release is published by repository cleanup.
+- Known limitations: large-list hitches and first-open Sort packet mismatches remain.
 
 ## 0.18.2 - first public release
 

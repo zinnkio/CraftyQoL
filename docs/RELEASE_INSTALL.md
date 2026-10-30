@@ -1,4 +1,4 @@
-# CraftyQoL 0.18.2
+# CraftyQoL 0.18.3
 
 Native Valheim crafting filters, recipe tracking and storage organisation.
 

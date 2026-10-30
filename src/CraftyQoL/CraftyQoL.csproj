@@ -4,7 +4,7 @@
     <IsValheimPlugin>true</IsValheimPlugin>
     <AssemblyName>CraftyQoL</AssemblyName>
     <RootNamespace>CraftyQoL</RootNamespace>
-    <Version>0.18.2</Version>
+    <Version>0.18.3</Version>
     <Description>Client-side native food and equipment Craft recipe navigation for Valheim.</Description>
   </PropertyGroup>
 </Project>

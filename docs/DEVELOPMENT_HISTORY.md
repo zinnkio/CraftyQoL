@@ -50,7 +50,7 @@ Project/assembly/namespace/plugin paths became CraftyQoL (`io.github.zinnkio.cra
 
 Discovery explicitly gated biome tooltip name lookup; recipe tooltips stopped reporting biome provenance. Tracker visibility investigation showed it was present but overlapped inventory, so only its new default moved to top centre. Existing positions stayed intact.
 
-Public 0.18.2 shipped with installation downloads, early AI disclosure and acknowledgements. Release validation passed 691 regression/API/compiled checks and two tooltip checks. This is the current downloadable release; later source changes below are unreleased.
+Public 0.18.2 shipped with installation downloads, early AI disclosure and acknowledgements. Release validation passed 691 regression/API/compiled checks and two tooltip checks. The later improvements below are included in 0.18.3.
 
 ## 30 October — creative-opening measurement and local refinements
 
@@ -64,8 +64,14 @@ Native recipe-row backgrounds were subsequently restored to square styling while
 
 ## 30 October — repository/package cleanup
 
-Historical reports and one-off inspection tools were archived privately. Current architecture/build/config/compatibility/manual guidance and this chronology replace duplicate records. All functional source, tests and seven factual fixtures were retained. Packaging now keeps build provenance beside the archive; the player ZIP contains only the plugin, installation notes, MIT licence and third-party notices. Cleanup changes no gameplay, schema or Harmony behaviour and creates no new release.
+Historical reports and one-off inspection tools were archived privately. Current architecture/build/config/compatibility/manual guidance and this chronology replace duplicate records. All functional source, tests and seven factual fixtures were retained. Packaging now keeps build provenance beside the archive; the player ZIP contains only the plugin, installation notes, MIT licence and third-party notices. Cleanup changed no gameplay, schema or Harmony behaviour and did not itself create a release.
 
 ## Validation approach
 
 Pure classifications, every discovery mask, query composition, atomic preference recovery, tracker math and fault-injected storage plans are tested independently of Unity. Installed API/body and compiled-plugin contracts catch integration drift. Small edits use targeted checks; larger integration/packaging milestones justify a full suite. Compilation does not prove rendering, multiplayer delivery or all mod combinations; see [manual checks](MANUAL_TESTS.md).
+
+## 30 October — 0.18.3 release checkpoint
+
+The already installed local implementation was promoted to a distinct patch version after cleanup: bounded owned-row reuse, square native recipe rows, native-height Craft pin/Sort controls and optional opening diagnostics. Only version metadata and its identity assertion changed for release preparation. Settings, favourites, pins, schemas and normal Harmony scope remain unchanged. Release packaging keeps the four-file player ZIP separate from developer provenance.
+
+Earlier creative inventory feedback and measured reuse improvements remain limited to their documented scope. Large-list hitches and the conservative first-open Sort packet mismatch remain known; visual sizing, broader controller/scaling and non-host multiplayer acceptance are not implied by release publication.

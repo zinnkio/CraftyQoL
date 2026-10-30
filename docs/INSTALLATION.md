@@ -5,7 +5,7 @@ Requires Valheim **1.0.21** and [BepInExPack_Valheim **5.4.2351**](https://thund
 ## Install or update
 
 1. Close Valheim and install BepInEx if needed.
-2. Download **CraftyQoL-0.18.2.zip** from [GitHub Releases](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.2).
+2. Download **CraftyQoL-0.18.3.zip** from [GitHub Releases](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.3).
 3. Copy the ZIP's **BepInEx** folder into your Valheim folder, merging with the existing folder. Copy only that folder; the remaining ZIP files are documentation/provenance.
 4. Confirm `BepInEx/plugins/CraftyQoL/CraftyQoL.dll` exists, then launch normally.
 
@@ -21,7 +21,7 @@ Open storage and press Sort for category sorting/stack consolidation. Custom-dat
 
 ## Troubleshooting and removal
 
-Check `BepInEx/LogOutput.log` for CraftyQoL 0.18.2. Confirm the game/loader version, a single installed copy and no conflicting recipe/inventory organiser. Unsupported storage or uncertain native access/ownership/synchronisation declines sorting.
+Check `BepInEx/LogOutput.log` for CraftyQoL 0.18.3. Confirm the game/loader version, a single installed copy and no conflicting recipe/inventory organiser. Unsupported storage or uncertain native access/ownership/synchronisation declines sorting.
 
 To uninstall or roll back, close the game and remove/replace only CraftyQoL's DLL. Preserve plugin configuration if desired; no character/world save edits are needed. [Report an issue](https://github.com/zinnkio/CraftyQoL/issues/new) with versions, steps and a relevant log excerpt, removing personal details first.
 
