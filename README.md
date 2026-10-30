@@ -8,7 +8,7 @@ Craft faster. Find recipes, track materials and organise storage without leaving
 
 **Valheim 1.0.21** · **BepInExPack 5.4.2351** · **Client-side**
 
-See the [changelog](CHANGELOG.md) for released and upcoming changes. [In-game screenshots](https://github.com/zinnkio/CraftyQoL/releases/tag/v0.18.3#screenshots) showcase the features in v0.18.3; v0.18.4 adds native button styling.
+See the [changelog](CHANGELOG.md) for released and upcoming changes.
 
 ## Features
 
@@ -23,6 +23,16 @@ See the [changelog](CHANGELOG.md) for released and upcoming changes. [In-game sc
 Works with **Cauldron, Food Preparation Table, Mead Ketill, Workbench, Forge, Black Forge, Galdr Table** and the stationless inventory Craft panel. Crafting requirements and progression remain vanilla; Upgrade and Repair are unchanged.
 
 Storage support includes standard chests, barrel, grausten chest, wardrobe, parked carts, Karve, Longship and Drakkar. [Compatibility details](docs/COMPATIBILITY.md).
+
+## Screenshots
+
+Captured in v0.18.3; v0.18.4 refines the button styling.
+
+| Equipment filtering | Favourites |
+| --- | --- |
+| ![Equipment categories, biome palette and recipe list](https://github.com/zinnkio/CraftyQoL/releases/download/v0.18.3/showcase-equipment.png) | ![Favourites-only equipment filtering](https://github.com/zinnkio/CraftyQoL/releases/download/v0.18.3/showcase-favourites.png) |
+| Food filtering and sorting | Recipe tracker |
+| ![Health food filtering and independent stat sorting](https://github.com/zinnkio/CraftyQoL/releases/download/v0.18.3/showcase-food.png) | ![Combined carried-material requirements in the recipe tracker](https://github.com/zinnkio/CraftyQoL/releases/download/v0.18.3/showcase-tracker.png) |
 
 ## Install
 
