@@ -233,7 +233,7 @@ internal static class Program
         using (AssemblyDefinition assembly = AssemblyDefinition.ReadAssembly(path))
         {
             var module=assembly.MainModule;
-            Assert(assembly.Name.Name=="CraftyQoL" && assembly.Name.Version==new Version(0,18,2,0),"Rebranded assembly identity mismatch");
+            Assert(assembly.Name.Name=="CraftyQoL" && assembly.Name.Version==new Version(0,18,3,0),"Rebranded assembly identity mismatch");
             var identity=module.GetType("CraftyQoL.Plugin");
             Assert((string)identity.Fields.Single(f=>f.Name=="Id").Constant=="io.github.zinnkio.craftyqol" && (string)identity.Fields.Single(f=>f.Name=="Name").Constant=="CraftyQoL","Rebranded plugin/config identity mismatch");
             var declared=identity.CustomAttributes.Single(a=>a.AttributeType.FullName=="BepInEx.BepInPlugin").ConstructorArguments;
