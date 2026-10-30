@@ -23,6 +23,7 @@ namespace CraftyQoL
                 if (StationScope.Identify(__instance) == null) return;
                 if (Plugin.Instance != null && Plugin.Instance.LogRefreshes.Value)
                     __state = new Trace { Active = true, Source = __0.Count, Started = System.Diagnostics.Stopwatch.GetTimestamp() };
+                view.BeforeRowsRebuilt();
                 __0 = view.Filter(__0);
             }
             catch (Exception error) { Plugin.Instance?.Fail(error); }

@@ -12,6 +12,7 @@ namespace CraftyQoL
         internal readonly Button Button;
         private readonly InventoryGui _gui;
         private readonly RectTransform _craft;
+        private readonly RectTransform _buttonRect;
         private readonly Vector2 _originalOffset, _writtenOffset;
         private readonly PinGraphic _icon;
         private bool _layoutApplied;
@@ -32,12 +33,14 @@ namespace CraftyQoL
             root.anchorMin=Vector2.zero;root.anchorMax=Vector2.one;root.offsetMin=root.offsetMax=Vector2.zero;
             try
             {
-                Button = NativeToolbar.MakeButton(gui, root, "", "Pin recipe to tracker (independent of favourites)", Toggle, 0,0,TrackerPinGeometry.Size,TrackerPinGeometry.Size);
+                Button = NativeToolbar.MakeButton(gui, root, "", "Pin recipe to tracker (independent of favourites)", Toggle, 0,0,TrackerPinGeometry.Size,_craft.rect.height);
                 foreach(EventTrigger trigger in Button.GetComponentsInChildren<EventTrigger>(true))
                 { trigger.enabled=false;UnityEngine.Object.Destroy(trigger); }
                 var buttonRect=(RectTransform)Button.transform;
+                _buttonRect=buttonRect;
                 buttonRect.anchorMin=buttonRect.anchorMax=buttonRect.pivot=new Vector2(1,0.5f);
                 buttonRect.anchoredPosition=new Vector2(-TrackerPinGeometry.Gap,0);
+                MatchCraftHeight();
                 Button.GetComponentInChildren<TMP_Text>(true).gameObject.SetActive(false);
                 var graphic=new GameObject("CraftyQoL.PinIcon",typeof(RectTransform),typeof(PinGraphic));
                 var iconRect=(RectTransform)graphic.transform;iconRect.SetParent(Button.transform,false);
@@ -96,7 +99,19 @@ namespace CraftyQoL
             if(_layoutApplied)
             {if(_craft.offsetMax!=_writtenOffset)throw new NotSupportedException("Craft button layout changed externally.");return;}
             if(_craft.offsetMax!=_originalOffset || !TrackerPinGeometry.Fits(_craft.rect.width))throw new NotSupportedException("Craft button layout no longer qualifies.");
+            MatchCraftHeight();
             _craft.offsetMax=_writtenOffset;_layoutApplied=true;
+        }
+        private void MatchCraftHeight()
+        {
+            // The owned root fills the Craft button's parent, so matching its vertical
+            // anchors/offsets aligns both edges without moving or resizing the native button.
+            _buttonRect.anchorMin=new Vector2(1,_craft.anchorMin.y);
+            _buttonRect.anchorMax=new Vector2(1,_craft.anchorMax.y);
+            _buttonRect.pivot=new Vector2(1,_craft.pivot.y);
+            var min=_buttonRect.offsetMin;var max=_buttonRect.offsetMax;
+            min.y=_craft.offsetMin.y;max.y=_craft.offsetMax.y;
+            _buttonRect.offsetMin=min;_buttonRect.offsetMax=max;
         }
         private void RestoreLayout()
         {if(_layoutApplied && _craft && _craft.offsetMax==_writtenOffset)_craft.offsetMax=_originalOffset;_layoutApplied=false;}

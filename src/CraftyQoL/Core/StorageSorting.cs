@@ -136,8 +136,9 @@ namespace CraftyQoL.Core
         private static bool Overlap(UiBox a,UiBox b)=>a.X<b.Right && b.X<a.Right && a.Y<b.Bottom && b.Y<a.Bottom;
         internal static bool Place(float width,float height,UiBox title,UiBox stack,UiBox take,UiBox weight,out UiBox button)
         {
-            float left=title.Right+4,right=stack.X-4;button=new UiBox((left+right-44)/2,title.Y+(title.Height-22)/2,44,22);
-            return !float.IsNaN(width) && !float.IsNaN(height) && right-left>=44 && button.X>=2 && button.Right<=width-2 &&
+            float left=title.Right+4,right=stack.X-4;button=new UiBox((left+right-44)/2,stack.Y,44,stack.Height);
+            return !float.IsNaN(width) && !float.IsNaN(height) && !float.IsNaN(stack.Height) && !float.IsInfinity(stack.Height) && stack.Height>0 &&
+                right-left>=44 && button.X>=2 && button.Right<=width-2 &&
                 button.Y>=0 && button.Bottom<=height && !Overlap(button,title) && !Overlap(button,stack) && !Overlap(button,take) && !Overlap(button,weight);
         }
     }

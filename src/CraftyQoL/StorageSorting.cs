@@ -142,7 +142,7 @@ namespace CraftyQoL
         private void Create(InventoryGui gui)
         {
             DisposeButton();_gui=gui;
-            _button=NativeToolbar.MakeButton(gui,gui.m_container,"Sort","Sort & Stack: Category",Sort,0,0,44,22);
+            _button=NativeToolbar.MakeButton(gui,gui.m_container,"Sort","Sort & Stack: Category",Sort,0,0,44,((RectTransform)gui.m_stackAllButton.transform).rect.height);
             foreach(EventTrigger trigger in _button.GetComponentsInChildren<EventTrigger>(true)){trigger.enabled=false;UnityEngine.Object.Destroy(trigger);}
             _group=_button.gameObject.AddComponent<CanvasGroup>();
             _button.navigation=new Navigation{mode=Navigation.Mode.Explicit,selectOnLeft=_button,selectOnRight=_button,selectOnUp=_button,selectOnDown=_button};

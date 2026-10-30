@@ -19,16 +19,19 @@ namespace CraftyQoL
 
         internal void Invalidate()
         {
+            InventoryOpeningProfiler.Note(OpeningCapture.Event.MetadataInvalidated);
             _db = null; _scene = null; _recipes.Clear(); _keyCounts.Clear(); _graph = new FoodGraph(); _meads = new MeadGraph();
         }
         internal void Ensure(bool includeMeads=false,bool inventory=false)
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.MetadataEnsure);
             ObjectDB db = ObjectDB.instance;
             ZNetScene scene = ZNetScene.instance;
             if (!db || !scene) throw new InvalidOperationException("Recipe metadata context is unavailable.");
             string language = Localization.instance != null ? Localization.instance.GetSelectedLanguage() : "";
             if (_language != language) { _recipes.Clear(); _language = language; }
             if (_db == db && _scene == scene && _recipeCount == db.m_recipes.Count && _prefabCount == scene.m_prefabs.Count && (!includeMeads || _meadReady) && _inventory==inventory) return;
+            InventoryOpeningProfiler.Note(OpeningCapture.Event.MetadataRebuild);
             _db = db; _scene = scene; _meadReady=includeMeads; _inventory=inventory;
             _recipeCount = db.m_recipes.Count; _prefabCount = scene.m_prefabs.Count;
             _recipes.Clear(); _keyCounts.Clear(); _graph = new FoodGraph(); _meads = new MeadGraph();
@@ -73,6 +76,7 @@ namespace CraftyQoL
         internal RecipeInfo Get(Recipe recipe)
         {
             if (_recipes.TryGetValue(recipe, out RecipeInfo cached)) return cached;
+            InventoryOpeningProfiler.Note(OpeningCapture.Event.MetadataMiss);
             if (!recipe || !recipe.m_item || recipe.m_item.m_itemData?.m_shared == null)
                 throw new InvalidOperationException("Recipe output metadata is invalid.");
             string output = recipe.m_item.gameObject.name;

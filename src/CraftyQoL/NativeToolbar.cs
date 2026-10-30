@@ -249,6 +249,7 @@ namespace CraftyQoL
         }
         private void ApplyInventoryLayout()
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.ToolbarLayout);
             var geometry=InventoryGeometry;bool expanded=_state.Disclosure.Expanded;
             _types=_inventoryGroups.TryGetValue(_state.Family,out var group)?group:Array.Empty<Button>();
             Place((RectTransform)_filters!.transform,geometry.Toggle);
@@ -287,6 +288,7 @@ namespace CraftyQoL
         }
         internal void Bind(QueryState state)
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.ToolbarBind);
             _state = state;
             if(state.Mead || state.Inventory && !InventoryRules.HasBiomes(state.Family))state.Biome=BiomeChoice.All;
             Search.SetTextWithoutNotify(state.Search);

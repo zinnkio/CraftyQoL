@@ -130,7 +130,7 @@ internal static class MeadTests
             Program.Assert(!TrackerUiPolicy.Visible(true,false,true,true));
             Program.Assert(TrackerUiPolicy.CanEdit(true) && !TrackerUiPolicy.CanEdit(false));
         });
-        test("pin square reserves a bounded native Craft slot",()=>
+        test("pin width reserves a bounded native Craft slot",()=>
         {
             Program.Assert(TrackerPinGeometry.Size==32 && TrackerPinGeometry.Reserve==40);
             Program.Assert(!TrackerPinGeometry.Fits(float.NaN) && !TrackerPinGeometry.Fits(135) && TrackerPinGeometry.Fits(136));

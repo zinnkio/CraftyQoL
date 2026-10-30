@@ -107,7 +107,14 @@ internal static class StorageTests
         test("storage header gap fits native geometry and declines overlapping or scaled-small layouts",()=>
         {
             var title=new UiBox(201.5f,7.7f,167,23);var stack=new UiBox(435.7f,1.8f,133,40);var take=new UiBox(-1.5f,-3,133,40);var weight=new UiBox(250,290,67,22);
-            Program.Assert(StorageGeometry.Place(570,340,title,stack,take,weight,out var button) && button.Width==44 && button.Height==22);
+            Program.Assert(StorageGeometry.Place(570,340,title,stack,take,weight,out var button) && button.Width==44 && button.Height==stack.Height && button.Y==stack.Y);
+            foreach(float nativeHeight in new[]{32f,40f,48f})
+            {
+                var native=new UiBox(stack.X,stack.Y,stack.Width,nativeHeight);
+                Program.Assert(StorageGeometry.Place(570,340,title,native,take,weight,out var resized) && resized.Height==nativeHeight && resized.Y==native.Y);
+            }
+            Program.Assert(!StorageGeometry.Place(570,340,title,new UiBox(stack.X,stack.Y,stack.Width,float.NaN),take,weight,out _));
+            Program.Assert(!StorageGeometry.Place(570,340,title,new UiBox(stack.X,stack.Y,stack.Width,0),take,weight,out _));
             Program.Assert(!StorageGeometry.Place(400,340,title,stack,take,weight,out _));
             Program.Assert(!StorageGeometry.Place(570,340,title,new UiBox(390,1,133,40),take,weight,out _));
             Program.Assert(!StorageGeometry.Place(570,340,title,stack,take,button,out _));

@@ -18,6 +18,22 @@ internal static class Program
     }
     private static int Main(string[] args)
     {
+        int rowWidgets=Array.IndexOf(args,"--row-widgets");
+        if(rowWidgets>=0)
+        {
+            RowWidgetTests.Run(Check);
+            Check("compiled row reuse lifecycle/input/presentation-only contracts",()=>RowWidgetTests.Contracts(args[rowWidgets+1]));
+            Console.WriteLine($"{_passed} row-widget checks passed; {_failed} failed. No Unity runtime validation performed.");
+            return _failed==0?0:1;
+        }
+        int profile=Array.IndexOf(args,"--opening-profile");
+        if(profile>=0)
+        {
+            OpeningProfileTests.Run(Check);
+            Check("optional profiler installed API/read-only/opt-in contracts",()=>OpeningProfileTests.Contracts(args[profile+1],args[profile+2],args[profile+3]));
+            Console.WriteLine($"{_passed} opening profile checks passed; {_failed} failed. No Unity runtime profiling performed.");
+            return _failed==0?0:1;
+        }
         int storageApi=Array.IndexOf(args,"--storage-api");
         if(storageApi>=0)
         {
@@ -85,6 +101,8 @@ internal static class Program
             BiomeAudit.Export(args[audit + 1], args[audit + 2]);
             return 0;
         }
+        RowWidgetTests.Run(Check);
+        OpeningProfileTests.Run(Check);
         Check("qualified stations only", () =>
         {
             Assert(StationRules.IsSupported("piece_cauldron"));
@@ -101,6 +119,7 @@ internal static class Program
         if (api >= 0) Check("installed API signatures", () => { Assert(api + 1 < args.Length, "--api requires an assembly path"); InspectApi(args[api + 1]); });
         int plugin = Array.IndexOf(args, "--plugin");
         if (plugin >= 0) Check("plugin patch scope and read-only discovery adapter", () => { Assert(plugin + 1 < args.Length); InspectPlugin(args[plugin + 1]); });
+        if (plugin >= 0) Check("compiled row reuse lifecycle/input/presentation-only contracts",()=>RowWidgetTests.Contracts(args[plugin+1]));
         if(api>=0)Check("native storage authority/serialisation contracts",()=>StorageContracts.Native(args[api+1]));
         if(plugin>=0)Check("compiled storage controlled-write contracts",()=>StorageContracts.Plugin(args[plugin+1]));
         foreach (string action in new[] { "Inventory", "Use", "JoyButtonY", "JoyButtonB", "JoyTabLeft", "JoyTabRight", "JoyDPadUp", "JoyLStickDown" })
@@ -332,6 +351,10 @@ internal static class Program
         var pin=module.GetType("CraftyQoL.TrackerPinControl");
         Assert(pin.Methods.Single(m=>m.Name=="Hide").Body.Instructions.Any(i=>i.Operand is MethodReference m && m.Name=="RestoreLayout"));
         Assert(pin.Methods.Single(m=>m.Name=="ApplyLayout").Body.Instructions.Any(i=>i.Operand is MethodReference m && m.Name=="set_offsetMax"));
+        var pinHeight=pin.Methods.Single(m=>m.Name=="MatchCraftHeight").Body.Instructions.Select(i=>i.Operand).OfType<MethodReference>().Select(m=>m.Name).ToArray();
+        foreach(string field in new[]{"anchorMin","anchorMax","pivot","offsetMin","offsetMax"})
+            Assert(pinHeight.Contains("get_"+field) && pinHeight.Contains("set_"+field),"Pin must match native Craft vertical geometry: "+field);
+        Assert(pin.Methods.Single(m=>m.Name=="ApplyLayout").Body.Instructions.Any(i=>i.Operand is MethodReference m && m.Name=="MatchCraftHeight"),"Pin height must reconcile on reopen");
         Assert(module.GetType("CraftyQoL.PinGraphic").BaseType.FullName=="UnityEngine.UI.MaskableGraphic","Pin must be a mesh icon, not a font glyph");
         Assert(!pin.Methods.Where(m=>m.HasBody).SelectMany(m=>m.Body.Instructions).Any(i=>i.Operand is MethodReference m && m.Name=="set_text"),"Pin label must not reappear");
         Assert(pin.Methods.Single(m=>m.Name=="Toggle").Body.Instructions.Any(i=>i.Operand is MethodReference m && m.Name=="Identify"),"Detail action must recheck Craft scope");

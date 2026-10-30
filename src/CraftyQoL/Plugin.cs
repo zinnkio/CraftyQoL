@@ -18,6 +18,7 @@ namespace CraftyQoL
         internal static Plugin? Instance { get; private set; }
         internal ConfigEntry<bool> Enabled = null!;
         internal ConfigEntry<bool> LogRefreshes = null!;
+        private ConfigEntry<bool> _profileInventoryOpenings = null!;
         internal FavouriteStore Favourites = null!;
         private RecipeTracker? _tracker;
         private StorageSorting? _storage;
@@ -35,6 +36,8 @@ namespace CraftyQoL
             if (Application.isBatchMode) return;
             Enabled = Config.Bind("General", "Enabled", true, "Enable native inventory/station Craft navigation, recipe tracker and storage Sort & Stack.");
             LogRefreshes = Config.Bind("Diagnostics", "LogRefreshes", false, "Log list refresh counts/timings for manual performance validation.");
+            _profileInventoryOpenings = Config.Bind("Diagnostics", "ProfileInventoryOpenings", false,
+                "Temporary opt-in stationless inventory profiling. Requires restart. Writes bounded timing/allocation reports, not recipe/player identities. See docs/CREATIVE_INVENTORY_PROFILING.md.");
             try
             {
                 GameContracts.Resolve();
@@ -46,6 +49,7 @@ namespace CraftyQoL
                 _harmony.PatchAll(typeof(Plugin).Assembly);
                 _tracker = gameObject.AddComponent<RecipeTracker>(); _tracker.Initialise(preferences);
                 _storage=gameObject.AddComponent<StorageSorting>();_storage.Initialise();
+                if(_profileInventoryOpenings.Value)gameObject.AddComponent<InventoryOpeningProfiler>().Initialise();
                 Logger.LogInfo($"{Name} {Version}: native UI contracts resolved. Runtime validation is required.");
             }
             catch (System.Exception error)
@@ -123,6 +127,7 @@ namespace CraftyQoL
             Logger.LogError($"CraftyQoL disabled for this session: {error}");
         }
         internal void DiscoveryUnavailable() => Logger.LogWarning("Biome discovery unavailable; biome options remain hidden.");
+        internal void DiagnosticMessage(string message)=>Logger.LogInfo(message);
         internal void ReportRefresh(long count, int input, int visible, double milliseconds)
             => Logger.LogInfo($"Food list refresh {count}: {input} available -> {visible} visible; total metadata/native UI/order {milliseconds:F2} ms.");
     }

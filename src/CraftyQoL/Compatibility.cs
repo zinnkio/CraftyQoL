@@ -13,7 +13,7 @@ namespace CraftyQoL
             Patches? patches = Harmony.GetPatchInfo(GameContracts.RebuildList);
             if (patches == null) return null;
             foreach (Patch prefix in patches.Prefixes)
-                if (prefix.owner != Plugin.Id) return "Untested recipe-list prefix: " + prefix.owner;
+                if (prefix.owner != Plugin.Id && !InventoryOpeningProfiler.IsOwnListPrefix(prefix)) return "Untested recipe-list prefix: " + prefix.owner;
             foreach (Patch transpiler in patches.Transpilers)
                 if (transpiler.owner != Plugin.Id) return "Untested recipe-list transpiler: " + transpiler.owner;
             return null;

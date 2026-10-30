@@ -32,7 +32,8 @@ namespace CraftyQoL
         }
         internal static StarGraphic AddStar(Button button)
         {
-            button.GetComponentInChildren<TMP_Text>(true).gameObject.SetActive(false);
+            TMP_Text? label=button.GetComponentInChildren<TMP_Text>(true);
+            if(label)label!.gameObject.SetActive(false);
             var go = new GameObject("CraftyQoL.Star", typeof(RectTransform), typeof(StarGraphic));
             go.transform.SetParent(button.transform, false);
             var rect = (RectTransform)go.transform;

@@ -27,6 +27,7 @@ namespace CraftyQoL
         private int _released = -1;
         private GameObject? _previousFocus;
         internal int Revision { get; private set; }
+        internal static int ProfilePinCount=>Current?._store?.State.Pins.Count??0;
         internal bool Ready => !_failed && _store != null && _player && _player == Player.m_localPlayer && _scope.Length > 0 &&
             Game.instance && Game.instance.GetPlayerProfile() != null && Game.instance.GetPlayerProfile().GetPlayerID() == _characterId &&
             ZNet.instance && ZNet.instance.GetWorld() != null && ZNet.instance.GetWorldUID() == _worldId;
@@ -111,6 +112,7 @@ namespace CraftyQoL
         }
         private void RefreshModel()
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.TrackerModel);
             Plugin.Instance?.MigrateLoadedRecipes();
             _catalogue.Prepare(_player!,_store!.State.Pins.Exists(pin=>pin.Station==InventoryRules.Origin));
             _dirty = false; _notes.Clear();

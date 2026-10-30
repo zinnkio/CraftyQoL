@@ -15,6 +15,7 @@ namespace CraftyQoL
         private NativeToolbar? _toolbar;
         private TrackerPinControl? _pin;
         private CraftButtonStyle? _buttonStyle;
+        private RowWidgetPool? _rowWidgets;
         private bool _pinUnavailable;
         private bool _shown, _closing, _dirty;
         private float _refreshAt;
@@ -43,6 +44,7 @@ namespace CraftyQoL
 
         internal static void Present(InventoryGui gui, QueryState state)
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.ToolbarPresent);
             if (Current && Current!._gui != gui) Current!.CloseOwned();
             FoodView view = gui.GetComponent<FoodView>() ?? gui.gameObject.AddComponent<FoodView>();
             Current = view;
@@ -108,6 +110,7 @@ namespace CraftyQoL
         }
         private void Schedule(bool immediate)
         {
+            InventoryOpeningProfiler.Note(OpeningCapture.Event.RefreshRequested);
             _dirty = true;
             _refreshAt = immediate ? 0f : Time.unscaledTime + 0.15f;
         }
@@ -144,22 +147,28 @@ namespace CraftyQoL
             StationScope.Identify(_gui)==InventoryRules.Origin && _sourceAccess==InventoryCrafting.Access && _rows.Exists(row=>row.Recipe==recipe);
         internal List<Recipe> Filter(List<Recipe> source)
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.FilterTotal);
             _sourceAccess=InventoryCrafting.Access;
             _metadata.Ensure(State.Mead || State.Inventory,State.Inventory);
             _sources.Clear();
             var infos = new List<RecipeInfo>(source.Count);
+            using(InventoryOpeningProfiler.Measure(OpeningPhase.MetadataRecords))
             foreach (Recipe recipe in source)
             {
                 if (recipe.m_noCraftOnlyUpgrade) continue; // Same exclusion as native InCraftTab population.
                 RecipeInfo info = _metadata.Get(recipe);
                 infos.Add(info); _sources[info] = recipe;
             }
+            using(InventoryOpeningProfiler.Measure(OpeningPhase.Palette))
+            {
             UpdateDiscovery(false);
             if(State.Inventory)
             {
                 if(InventoryRules.HasBiomes(State.Family))_toolbar?.SetBiomes(infos.FindAll(info=>info.Family==State.Family),_discovered);
             }
             else if(!State.Mead)_toolbar?.SetBiomes(infos, _discovered);
+            }
+            using var queryProfiling=InventoryOpeningProfiler.Measure(OpeningPhase.Query);
             if (_hasApplied && (float)GameContracts.CraftTimer.GetValue(_gui) >= 0)
             {
                 var held = new List<Recipe>(source.Count);
@@ -193,6 +202,7 @@ namespace CraftyQoL
         }
         internal void RowsPopulated()
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.RowsTotal);
             ClearDecorations();
             var pairs = (IList)GameContracts.Pairs.GetValue(_gui);
             _toolbar?.ShowEmpty(pairs.Count == 0);
@@ -217,12 +227,14 @@ namespace CraftyQoL
                 }
                 else if (_applied.Sort != FoodSort.Vanilla)
                     StableOrder.Sort(_rows, (a, b) => RecipeQuery.Compare(a.Info, b.Info, _applied.Sort));
+                using var decorationsProfiling=InventoryOpeningProfiler.Measure(OpeningPhase.RowOrderAndDecorations);
                 for (int i = 0; i < _rows.Count; i++)
                 {
                     RecipeRow row = _rows[i];
                     pairs[i] = row.Pair;
                     ((RectTransform)row.Element.transform).anchoredPosition = new Vector2(0, -i * _gui.m_recipeListSpace);
-                    var decoration = new RowDecoration(_gui, row, Plugin.Instance!.Favourites.Keys.Contains(row.Info.Key), () => ToggleFavourite(row.Info),
+                    _rowWidgets??=new RowWidgetPool(_gui);
+                    var decoration = new RowDecoration(_gui, _rowWidgets, row, Plugin.Instance!.Favourites.Keys.Contains(row.Info.Key), () => ToggleFavourite(row.Info),
                         _applied.Inventory?row.Info.Family!=RecipeFamily.Food && row.Info.Family!=RecipeFamily.Mead:_applied.Equipment,
                         _applied.Inventory?row.Info.Family==RecipeFamily.Mead:_applied.Mead,
                         _applied.Inventory && row.Info.Family==RecipeFamily.Other);
@@ -245,6 +257,7 @@ namespace CraftyQoL
         }
         internal void AfterPanel()
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.SelectionRestore);
             if (!_shown) return;
             _gui.m_recipeListScroll.value = _rows.Count == 0 ? 1 : _savedScroll;
             object selected = GameContracts.SelectedPair.GetValue(_gui);
@@ -262,10 +275,17 @@ namespace CraftyQoL
         }
         private void ClearDecorations()
         {
+            using var profiling=InventoryOpeningProfiler.Measure(OpeningPhase.DecorationCleanup);
             if (EventSystem.current && _rowActions.Contains(EventSystem.current.currentSelectedGameObject))
                 EventSystem.current.SetSelectedGameObject(_toolbar != null ? _toolbar.FocusTarget : null);
             foreach (RowDecoration decoration in _decorations) decoration.Dispose();
             _decorations.Clear(); _rowActions.Clear();
+        }
+        internal void BeforeRowsRebuilt()
+        {
+            if(_decorations.Count==0)return;
+            _tooltipBackground.Restore();
+            ClearDecorations(); // Detach owned widgets before vanilla schedules its row destruction.
         }
         private void UpdateDiscovery(bool updatePalette = true)
         {
@@ -293,6 +313,7 @@ namespace CraftyQoL
                 { Plugin.Instance.PanelChanged(_gui); return; }
                 if(State.Inventory && _access!=InventoryCrafting.Access)
                 {
+                    InventoryOpeningProfiler.Note(OpeningCapture.Event.AccessChanged);
                     _access=InventoryCrafting.Access;State.Disclosure.Observe(_access);_toolbar.Bind(State);
                     _availabilityDirty=true;Schedule(true);
                 }
@@ -330,6 +351,7 @@ namespace CraftyQoL
                     (_availabilityDirty || (float)GameContracts.CraftTimer.GetValue(_gui) < 0))
                 {
                     _availabilityDirty=false;
+                    InventoryOpeningProfiler.Note(OpeningCapture.Event.ScheduledRefresh);
                     _dirty = false;
                     _applyingUserRefresh = _userRefresh;
                     _userRefresh = false;
@@ -384,6 +406,8 @@ namespace CraftyQoL
         internal void CloseOwned()
         {
             Suspend();
+            ClearDecorations();
+            _rowWidgets?.Dispose();_rowWidgets=null;
             _pin?.Dispose(); _pin = null;
             _toolbar?.Dispose();
             _toolbar = null;
